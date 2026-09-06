@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 24px;fill: #ff9500;font-weight: 700;font-family: "DejaVuSansCondensed-Bold", "DejaVu Sans" } 
+	</style>
+	<text id="E-Learning A1" transform="translate(15,57)">
+		<tspan x="0" y="0" class="t0">E</tspan><tspan  y="0" class="t0">-</tspan><tspan  y="0" class="t0">L</tspan><tspan  y="0" class="t0">e</tspan><tspan  y="0" class="t0">a</tspan><tspan  y="0" class="t0">r</tspan><tspan  y="0" class="t0">n</tspan><tspan  y="0" class="t0">i</tspan><tspan  y="0" class="t0">n</tspan><tspan  y="0" class="t0">g</tspan><tspan  y="0" class="t0"> </tspan><tspan  y="0" class="t0">A</tspan><tspan  y="0" class="t0">1</tspan><tspan  y="0" class="t0">
+</tspan>
+	</text>
+</svg>
