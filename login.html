@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - LinguaStep A1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso - LinguaStep A1</title>
 </head>
 <body>
 
-    <header>
-        <h1>LinguaStep A1</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="login.html">Acceso</a></li>
-                <li><a href="student.html">Estudiante</a></li>
-                <li><a href="teacher.html">Profesor</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>LinguaStep A1</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Acceso</a></li>
+        <li><a href="student.html">Estudiante</a></li>
+        <li><a href="teacher.html">Profesor</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        
-        <section id="presentacion">
-            <header>
-                <h2>LinguaStep A1</h2>
-            </header>
-            
-            <img src="assets/imagen_index.png" alt="Estudiante aprendiendo idiomas" width="300">
+  <main>
 
-            <article>
-                <h2>Bridge the gap to fluency.</h2>
-                <p>Step-by-step English learning designed specifically for absolute beginners. Start your journey today.</p>
-            </article>
-        </section>
+    <section id="presentacion">
+      <h2>Aprende inglés desde cero</h2>
+      <img src="assets/imagen_index.png" alt="Estudiante aprendiendo idiomas" width="300">
+      <p>Curso paso a paso diseñado para principiantes absolutos. Empieza tu camino hoy.</p>
+    </section>
 
-        <section id="autenticacion">
+    <section id="iniciar-sesion">
+      <h2>Iniciar sesión</h2>
+      <p>Ingresa tus datos para continuar.</p>
 
-            <header>
-                <h2>Bienvenido de nuevo</h2>
-                <p>Por favor, ingresa tus datos para continuar.</p>
-            </header>
+      <form action="#" method="post">
+        <p>
+          <label for="login-email">Correo electrónico</label><br>
+          <input type="email" id="login-email" name="email"
+                 placeholder="ejemplo@correo.com" required autocomplete="email">
+        </p>
+        <p>
+          <label for="login-password">Contraseña</label><br>
+          <input type="password" id="login-password" name="password"
+                 placeholder="********" required autocomplete="current-password">
+        </p>
+        <button type="submit">Ingresar</button>
+      </form>
+    </section>
 
-            <form action="#" method="POST">
-                
-                <label for="correo">Correo electrónico</label><br>
-                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
-                
-                <br><br>
+    <section id="registro">
+      <h2>Crear cuenta</h2>
+      <p>¿No tienes cuenta? Regístrate aquí.</p>
 
-                <label for="password">Contraseña</label><br>
-                <input type="password" id="password" name="password" placeholder="********" required>
-                
-                <br><br>
+      <form action="#" method="post">
+        <p>
+          <label for="reg-nombre">Nombre completo</label><br>
+          <input type="text" id="reg-nombre" name="nombre"
+                 placeholder="Tu nombre" required autocomplete="name">
+        </p>
+        <p>
+          <label for="reg-email">Correo electrónico</label><br>
+          <input type="email" id="reg-email" name="email"
+                 placeholder="ejemplo@correo.com" required autocomplete="email">
+        </p>
+        <p>
+          <label for="reg-password">Contraseña</label><br>
+          <input type="password" id="reg-password" name="password"
+                 placeholder="********" required autocomplete="new-password">
+        </p>
+        <button type="submit">Registrarme</button>
+      </form>
+    </section>
 
-                <button type="submit">Ingresar</button>
-                
-            </form>
+  </main>
 
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 LinguaStep A1 - UTP</p>
-    </footer>
+  <footer>
+    <p>&copy; 2026 LinguaStep A1 - UTP</p>
+  </footer>
 
 </body>
 </html>
