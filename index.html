@@ -4,66 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>E-learning A1</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>Bienvenido al mundo de E-learning A1</h1>
+      <nav>
+        <div><img src="assets/logo.svg" alt="logoNav"></div> 
+        <div><a href="">About</a><a href="">Metodology</a><a href="">Contact</a></div>
+        <div><a href="ruta de login(modificar)">Login</a><a href="lo mismo aqui">Sign in</a></div>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#lecciones">Lecciones</a></li>
-        <li><a href="#cuestionarios">Cuestionarios</a></li>
-        <li><a href="#progreso">Progreso</a></li>
-      </ul>
-    </nav>
-    <article>
-        <h2>Dashboard</h2>
-        <p>Bienvenido a tu panel de control.<br>
-          Aquí puedes ver tu progreso y acceder a tus lecciones.</p>
-    </article>
 
-<section id="vision">
-  <h2>Visión</h2>
-  <p>
-    Buscamos ofrecer una forma clara y sencilla de seguir el progreso diario de cada estudiante dentro de la plataforma.
-  </p>
-  <p>
-    A futuro, el objetivo es que la plataforma cuente con un agente de IA capaz de personalizar las lecciones según los objetivos de cada usuario, ya sea mediante una solución simple con herramientas como n8n o, más adelante, con un agent harness más robusto. Dado que esto añade complejidad y excede el alcance requerido para el curso, la propuesta actual es mantener la plataforma accesible: se manejarán lecciones por defecto, con la opción de personalización manual. Esta base permitirá, en el futuro, evolucionar hacia soluciones de mayor complejidad.
-  </p>
-</section>
+    <main>
+      <section>
+       <div>
+          <img src="assets/imagen_index.png" alt="imagen_index">
+       </div> 
 
-    <table>
-      <thead>
-        <tr>
-          <th>Unidades</th>
-          <th>Instructor</th>
-          <th>Duracion</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Introducción a nuestra Metodologia</td>
-        <td>John Doe</td>
-        <td>2 horas</td>
-      </tr>
-      <tr>
-        <td>Aleman</td>
-        <td>Jane Smith</td>
-        <td>168 horas</td>
-      </tr>
-      <tr>
-        <td>Ingles Britanico</td>
-        <td>Emily Johnson</td>
-        <td>168 horas</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="3">Duración Total: 340 horas</td>
-      </tr>
-    </tfoot>
-    </table>
-  </body> 
+       <div>
+        <h2>Aprende Ingles desde 0</h2>
+        <br>
+        <p>Aprende y sigue tu progreso en en linea con English-A1 con lecciones perzonalizadas</p>
+        <br>
+        <button type="button">Comenzar leccion</button>
+       </div>
+      </section>
+
+      <section>
+        <h3>Explora el programa</h3>
+        <br>
+        <p>Bloques de contenido interactivo diseñados para mejorar tu experiencia de aprendizaje</p>
+        <br>
+        <table>
+          <tr>
+            <td colspan="2"><h4>Greetings and Introductions</h4><br><p>Aprende a saludar y presentarte</p></td>
+            <td><h4>Classroom Objects</h4><br><p>Vocabulario para el aula</p></td>
+          </tr>
+          <tr>
+            <td><h4>Family</h4><br><p>Describe tu familia y comparte información</p></td>
+            <td colspan="2"><h4>Daily Routines</h4><br><p>Habla sobre tus rutinas diarias y actividades</p></td>
+            </p></td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h3>Aprende con todos los sentidos</h3>
+        <br>
+        <p>Visual, auditivo y interactivo</p>
+        <br>
+        <audio controls>
+          <source src="assets/welcome-to-english-a1.mp3" type="audio/mpeg">
+        </audio>
+        <video controls width="640" height="360">
+          <source src="assets/english-a1-introduction.mp4" type="video/mp4">
+        </video>
+        <div><input type="text" placeholder="Type your name"> <br>
+          <button type="button">Submit</button>
+        </div>
+
+      </section>
+        <div><h3>Dudas? Contactanos</h3> <br> <p>Si tienes alguna pregunta, no dudes en contactarnos.</p></div>
+        <div> <form action="">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Correo electronico" required>
+          <textarea placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form></div>
+  
+    </main>
+
+    <footer>
+      <div>
+        <img src="assets/logo.svg" alt="logoFooter">
+      </div> 
+
+      <div> 
+        <ul class="footer-list">
+        <li>Privacy Policy</li>
+        <li>Terms of Service</li>
+        <li>Cookies</li>
+        <li>Support</li> 
+        </ul>
+      </div>
+
+      <div>
+        <p>&copy; Copyright (c) English-A1 2026. All Rights Reserved.</p>
+      </div>
+
+    </footer>
+  </body>
 </html> 
-
