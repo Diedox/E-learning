@@ -1,97 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E-learning A1</title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div><img src="assets/logo.svg" alt="logoNav"></div> 
-        <div><a href="">About</a><a href="">Metodology</a><a href="">Contact</a></div>
-        <div><a href="ruta de login(modificar)">Login</a><a href="lo mismo aqui">Sign in</a></div>
-      </nav>
-    </header>
 
-    <main>
-      <section>
-       <div>
-          <img src="assets/imagen_index.png" alt="imagen_index">
-       </div> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-learning A1</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
 
-       <div>
+<body>
+  <header>
+    <nav>
+      <div><img src="assets/logo.svg" alt="logoNav"></div>
+      <div><a href="">About</a><a href="">Metodology</a><a href="">Contact</a></div>
+      <div><a href="ruta de login(modificar)">Login</a><a href="lo mismo aqui">Sign in</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div>
+        <img src="assets/imagen_index.png" alt="imagen_index">
+      </div>
+
+      <div>
         <h2>Aprende Ingles desde 0</h2>
         <br>
         <p>Aprende y sigue tu progreso en en linea con English-A1 con lecciones perzonalizadas</p>
         <br>
         <button type="button">Comenzar leccion</button>
-       </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <h3>Explora el programa</h3>
-        <br>
-        <p>Bloques de contenido interactivo diseñados para mejorar tu experiencia de aprendizaje</p>
-        <br>
-        <table>
-          <tr>
-            <td colspan="2"><h4>Greetings and Introductions</h4><br><p>Aprende a saludar y presentarte</p></td>
-            <td><h4>Classroom Objects</h4><br><p>Vocabulario para el aula</p></td>
-          </tr>
-          <tr>
-            <td><h4>Family</h4><br><p>Describe tu familia y comparte información</p></td>
-            <td colspan="2"><h4>Daily Routines</h4><br><p>Habla sobre tus rutinas diarias y actividades</p></td>
-            </p></td>
-          </tr>
-        </table>
-      </section>
+    <section>
+      <h3>Explora el programa</h3>
+      <br>
+      <p>Bloques de contenido interactivo diseñados para mejorar tu experiencia de aprendizaje</p>
+      <br>
+      <table>
+        <tr>
+          <td colspan="2">
+            <h4>Greetings and Introductions</h4><br>
+            <p>Aprende a saludar y presentarte</p>
+          </td>
+          <td>
+            <h4>Classroom Objects</h4><br>
+            <p>Vocabulario para el aula</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h4>Family</h4><br>
+            <p>Describe tu familia y comparte información</p>
+          </td>
+          <td colspan="2">
+            <h4>Daily Routines</h4><br>
+            <p>Habla sobre tus rutinas diarias y actividades</p>
+          </td>
+          </p>
+          </td>
+        </tr>
+      </table>
+    </section>
 
-      <section>
-        <h3>Aprende con todos los sentidos</h3>
-        <br>
-        <p>Visual, auditivo y interactivo</p>
-        <br>
-        <audio controls>
-          <source src="assets/welcome-to-english-a1.mp3" type="audio/mpeg">
-        </audio>
-        <video controls width="640" height="360">
-          <source src="assets/english-a1-introduction.mp4" type="video/mp4">
-        </video>
-        <div><input type="text" placeholder="Type your name"> <br>
-          <button type="button">Submit</button>
-        </div>
+    <section>
+      <h3>Aprende con todos los sentidos</h3>
+      <br>
+      <p>Visual, auditivo y interactivo</p>
+      <br>
+      <audio controls>
+        <source src="assets/welcome-to-english-a1.mp3" type="audio/mpeg">
+      </audio>
+      <video controls width="640" height="360">
+        <source src="assets/english-a1-introduction.mp4" type="video/mp4">
+      </video>
+      <div><input type="text" placeholder="Type your name"> <br>
+        <button type="button">Submit</button>
+      </div>
 
-      </section>
-        <div><h3>Dudas? Contactanos</h3> <br> <p>Si tienes alguna pregunta, no dudes en contactarnos.</p></div>
-        <div> <form action="">
-          <input type="text" placeholder="Nombre" required>
-          <input type="email" placeholder="Correo electronico" required>
-          <textarea placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form></div>
-  
-    </main>
+    </section>
+    <div>
+      <h3>Dudas? Contactanos</h3> <br>
+      <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
+    </div>
+    <div>
+      <form action="">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electronico" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div><br>
+    <h2>Preferencias de Notificaciones</h2>
+    <ul>
+      <li>
+        <input type="checkbox" id="tareas" checked>
+        <label for="tareas">Nuevas tareas asignadas</label>
+      </li>
+      <li>
+        <input type="checkbox" id="calificaciones" checked>
+        <label for="calificaciones">Calificaciones publicadas</label>
+      </li>
+      <li>
+        <input type="checkbox" id="evaluaciones">
+        <label for="evaluaciones">Recordatorios de evaluaciones</label>
+      </li>
+      <li>
+        <input type="checkbox" id="mensajes" checked>
+        <label for="mensajes">Mensajes de profesores</label>
+      </li>
+      <li>
+        <input type="checkbox" id="anuncios">
+        <label for="anuncios">Anuncios generales</label>
+      </li>
+      <li>
+        <input type="checkbox" id="horario">
+        <label for="horario">Cambios de horario</label>
+      </li>
+      <li>
+        <input type="checkbox" id="progreso">
+        <label for="progreso">Reporte semanal de progreso</label>
+      </li>
+    </ul>
 
-    <footer>
-      <div>
-        <img src="assets/logo.svg" alt="logoFooter">
-      </div> 
+  </main>
 
-      <div> 
-        <ul class="footer-list">
+  <footer>
+    <div>
+      <img src="assets/logo.svg" alt="logoFooter">
+    </div>
+
+    <div>
+      <ul class="footer-list">
         <li>Privacy Policy</li>
         <li>Terms of Service</li>
         <li>Cookies</li>
-        <li>Support</li> 
-        </ul>
-      </div>
+        <li>Support</li>
+      </ul>
+    </div>
 
-      <div>
-        <p>&copy; Copyright (c) English-A1 2026. All Rights Reserved.</p>
-      </div>
+    <div>
+      <p>&copy; Copyright (c) English-A1 2026. All Rights Reserved.</p>
+    </div>
 
-    </footer>
-  </body>
-</html> 
+  </footer>
+</body>
+
+</html>
