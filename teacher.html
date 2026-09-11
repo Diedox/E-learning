@@ -1,53 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Panel Docente - LinguaStep A1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Docente - LinguaStep A1</title>
 </head>
 <body>
 
-    <header>
-        <h1>Panel del Profesor</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="login.html">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>LinguaStep A1</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Acceso</a></li>
+        <li><a href="student.html">Estudiante</a></li>
+        <li><a href="teacher.html">Profesor</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="resumen">
-            <h2>Métricas</h2>
-            <p>Estudiantes: 15 | Lecciones: 2</p>
-        </section>
+  <main>
 
-        <section id="gestion-leccion">
-            <h2>Crear Lección</h2>
-            <form action="#" method="POST">
-                <label for="unidad">Unidad:</label><br>
-                <input type="number" id="unidad" name="unidad" required><br><br>
+    <section>
+      <h2>Crear lección</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="unidad">Unidad (1 a 4)</label><br>
+          <input type="number" id="unidad" name="unidad" min="1" max="4" required>
+        </p>
+        <p>
+          <label for="titulo">Título</label><br>
+          <input type="text" id="titulo" name="titulo" required>
+        </p>
+        <p>
+          <label for="resumen">Resumen</label><br>
+          <textarea id="resumen" name="resumen" rows="3" required></textarea>
+        </p>
+        <p>
+          <label for="publicada">¿Publicada?</label>
+          <select id="publicada" name="publicada">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </p>
+        <button type="submit">Guardar lección</button>
+      </form>
+    </section>
 
-                <label for="titulo">Título:</label><br>
-                <input type="tex" id="titulo" name="titulo" required><br><br>
+    <section>
+      <h2>Añadir pregunta</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="enunciado">Enunciado</label><br>
+          <input type="text" id="enunciado" name="enunciado" required>
+        </p>
+        <p>
+          <label for="respuesta">Respuesta correcta</label><br>
+          <input type="text" id="respuesta" name="respuesta" required>
+        </p>
+        <button type="submit">Guardar pregunta</button>
+      </form>
+    </section>
 
-                <button type="submit">Guardar Lección</button>
-            </form>
-        </section>
+  </main>
 
-        <section id="gestion-pregunta">
-            <h2>Añadir Ejercicio</h2>
-            <form action="#">
-                <label for="pregunta">Pregunta:</label><br>
-                <input type="text" id="pregunta" name="pregunta" required><br><br>
+  <footer>
+    <p>&copy; 2026 LinguaStep A1 - UTP</p>
+  </footer>
 
-                <label for="respuesta">Respuesta Correcta:<br>
-                <input type="text" id="respuesta" name="respuesta" required><br><br>
-
-                <button type="submit">Guardar Ejercicio</button>
-            </form>
-        </section>
-
-    </main>
 </body>
 </html>
