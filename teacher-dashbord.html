@@ -36,8 +36,113 @@
     </div>
     </div>
     <button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-on-secondary-fixed-variant transition-colors mb-md">
-        
-<body>
+        Start Daily Lesson
+        </button>
+    <nav class="flex-1 space-y-2">
+    <!-- Active: Dashboard -->
+    <a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold translate-x-1 transition-transform duration-200" href="teacher-dashboard.html">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+    <span class="font-label-md text-label-md">Dashboard</span>
+    </a>
+    <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="teacher-dashboard.html">
+    <span class="material-symbols-outlined">auto_stories</span>
+    <span class="font-label-md text-label-md">My Lessons</span>
+    </a>
+    <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="quiz-results.html">
+    <span class="material-symbols-outlined">quiz</span>
+    <span class="font-label-md text-label-md">Practice</span>
+    </a>
+    <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="#">
+    <span class="material-symbols-outlined">menu_book</span>
+    <span class="font-label-md text-label-md">Dictionary</span>
+    </a>
+    <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="question-management.html">
+    <span class="material-symbols-outlined">settings</span>
+    <span class="font-label-md text-label-md">Settings</span>
+    </a>
+    </nav>
+    <div class="pt-md border-t border-outline-variant space-y-2">
+    <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="#">
+    <span class="material-symbols-outlined">help_outline</span>
+    <span class="font-label-md text-label-md">Help Center</span>
+    </a>
+    <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="login.html">
+    <span class="material-symbols-outlined">logout</span>
+    <span class="font-label-md text-label-md">Logout</span>
+    </a>
+    </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 md:ml-[280px] p-lg w-full max-w-container-max mx-auto overflow-y-auto">
+    <!-- Header Area -->
+    <header class="flex flex-col md:flex-row md:items-center justify-between mb-xl gap-md">
+    <div>
+    <h1 class="font-headline-lg text-headline-lg text-primary">Teacher Dashboard</h1>
+    <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Manage your curriculum and track student progress.</p>
+    </div>
+    <button class="bg-secondary text-on-secondary font-label-md text-label-md px-md py-sm rounded-lg hover:bg-on-secondary-fixed-variant transition-colors flex items-center gap-sm w-fit">
+    <span class="material-symbols-outlined">add</span>
+                    Nueva lección
+                </button>
+    </header>
+    <!-- Stats Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+    <!-- Stat Card 1 -->
+    <div class="bg-surface-container-lowest rounded-xl p-md card-shadow border border-surface-container border-transparent hover:border-secondary transition-colors duration-300">
+    <div class="flex items-center gap-sm text-on-surface-variant mb-sm">
+    <span class="material-symbols-outlined text-secondary">library_books</span>
+    <span class="font-label-md text-label-md">Total Lessons</span>
+    </div>
+    <p class="font-headline-xl text-headline-xl text-primary">42</p>
+    </div>
+    <!-- Stat Card 2 -->
+    <div class="bg-surface-container-lowest rounded-xl p-md card-shadow border border-surface-container border-transparent hover:border-secondary transition-colors duration-300">
+    <div class="flex items-center gap-sm text-on-surface-variant mb-sm">
+    <span class="material-symbols-outlined text-secondary">check_circle</span>
+    <span class="font-label-md text-label-md">Published Lessons</span>
+    </div>
+    <p class="font-headline-xl text-headline-xl text-primary">38</p>
+    </div>
+    <!-- Stat Card 3 -->
+    <div class="bg-surface-container-lowest rounded-xl p-md card-shadow border border-surface-container border-transparent hover:border-secondary transition-colors duration-300">
+    <div class="flex items-center gap-sm text-on-surface-variant mb-sm">
+    <span class="material-symbols-outlined text-secondary">trending_up</span>
+    <span class="font-label-md text-label-md">Students with Progress</span>
+    </div>
+    <p class="font-headline-xl text-headline-xl text-primary">156</p>
+    </div>
+    </section>
+    <!-- Content Area -->
+    <section class="bg-surface-container-lowest rounded-xl card-shadow overflow-hidden">
+    <!-- Page Nav -->
+    <div class="border-b border-surface-container px-md flex gap-md">
+    <button class="py-sm px-xs font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors">Resumen</button>
+    <button class="py-sm px-xs font-label-md text-label-md text-secondary border-b-2 border-secondary font-bold">Lecciones</button>
+    <button class="py-sm px-xs font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors">Preguntas</button>
+    <button class="py-sm px-xs font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors">Progreso</button>
+    </div>
+    <!-- Table -->
+    <div class="overflow-x-auto">
+    <table class="w-full text-left border-collapse">
+    <thead>
+    <tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+    <th class="py-sm px-md font-semibold">Título</th>
+    <th class="py-sm px-md font-semibold">Unidad</th>
+    <th class="py-sm px-md font-semibold">Estado</th>
+    <th class="py-sm px-md font-semibold text-right">Acciones</th>
+    </tr>
+    </thead>
+    <tbody class="font-body-md text-body-md divide-y divide-surface-container">
+    <tr class="hover:bg-surface-bright transition-colors group">
+    <td class="py-sm px-md font-medium text-primary">Greetings &amp; Introductions</td>
+    <td class="py-sm px-md text-on-surface-variant">Unit 1</td>
+    <td class="py-sm px-md">
+    <span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-[12px]">
+    <span class="w-2 h-2 rounded-full bg-secondary"></span> 
+                            Published
+    
+    
+
     
 </body>
 </html>
