@@ -19,6 +19,59 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="bg-surface text-on-surface min-h-screen flex font-body-md text-body-md">
-   
+
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-surface-container-low border-r border-outline-variant flex flex-col p-md space-y-md hidden md:flex z-50">
+<!-- Header -->
+<div class="px-md py-sm">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
+<p class="font-label-md text-label-md text-outline">Beginner Level</p>
+</div>
+<!-- Navigation -->
+<nav class="flex-1 space-y-sm mt-md">
+<!-- Dashboard (Inactive) -->
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="teacher-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- My Lessons (Active - Mapping Lesson Editor intent here) -->
+<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold font-label-md text-label-md translate-x-1 transition-transform duration-200 shadow-sm" href="lesson.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span>My Lessons</span>
+</a>
+<!-- Practice (Inactive) -->
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="quiz-results.html">
+<span class="material-symbols-outlined">quiz</span>
+<span>Practice</span>
+</a>
+<!-- Dictionary (Inactive) -->
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Dictionary</span>
+</a>
+<!-- Settings (Inactive) -->
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="question-management.html">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<!-- CTA -->
+<div class="mt-auto mb-md">
+<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm px-md rounded-lg hover:opacity-90 transition-opacity shadow-sm">
+                Start Daily Lesson
+            </button>
+</div>
+<!-- Footer Links -->
+<div class="border-t border-outline-variant pt-md space-y-sm">
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Help Center</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="login.html">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
 </body>
 </html>
