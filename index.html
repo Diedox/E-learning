@@ -1,17 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="es">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E-learning A1</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>LinguaStep A1 - Aprende inglés desde cero</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+
+
+    <link href="assets/css/styles.css" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <nav>
-        <div><img src="assets/logo.svg" alt="logoNav"></div> 
-        <div><a href="about.html">About</a><a href="">Metodology</a><a href="#contact">Contact</a></div>
-        <div><a href="login.html">Login</a><a href="teacher.html">Sign in</a></div>
+  
+  <body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+    <header class="g-surface shadow-sm sticky top-0 z-50 w-full">
+      <nav class="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
+        <div class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</div> 
+        <div class="hidden md:flex gap-lg items-center">
+          <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Features</a>
+          <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Methodology</a>
+          <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">Pricing</a>
+          <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#">About</a>
+        </div>
+        <div class="flex items-center gap-md">
+          <a href="login.html" class="font-label-md text-label-md text-primary font-bold hover:text-secondary transition-colors inline-flex items-center">Sign In</a>
+          <a href="login.html" class="bg-secondary text-on-secondary font-label-md text-label-md px-md py-sm rounded-lg font-bold hover:bg-secondary-fixed-dim transition-colors scale-95 duration-150 inline-flex items-center">Get Started</a>
+        </div>
       </nav>
     </header>
 
