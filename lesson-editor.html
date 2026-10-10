@@ -68,67 +68,147 @@
 </a>
 </div>
 </aside>
-    <!-- Contenedor Principal del Contenido -->
-<main class="flex-1 md:ml-[280px] p-lg bg-surface min-h-screen">
-    <!-- Barra Superior de Encabezado -->
-    <header class="flex justify-between items-center mb-lg pb-md border-b border-outline-variant">
-        <div>
-            <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Lesson Editor</h2>
-            <p class="font-body-md text-body-md text-outline">Crea y personaliza contenido de aprendizaje interactivo para LinguaStep A1.</p>
-        </div>
-        <div class="flex items-center gap-md">
-            <span class="material-symbols-outlined text-primary text-xl">account_circle</span>
-            <span class="font-label-lg text-label-lg font-bold text-on-surface">Antuane</span>
-        </div>
-    </header>
-
-    <!-- Tarjeta del Formulario del Editor -->
-    <div class="bg-surface-container-low border border-outline-variant rounded-xl p-lg shadow-sm max-w-4xl">
-        <h3 class="font-headline-md text-headline-md font-bold text-primary mb-md">Detalles de la Nueva Lección</h3>
-        
-        <form class="space-y-md">
-            <!-- Campo de Título de la Lección -->
-            <div>
-                <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-title">Título de la Lección</label>
-                <input class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary" type="text" id="lesson-title" placeholder="ej., Saludos Básicos y Presentaciones" />
-            </div>
-
-            <!-- Selección de Unidad / Categoría -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-                <div>
-                    <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-unit">Número de Unidad</label>
-                    <select class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary" id="lesson-unit">
-                        <option>Unidad 1: Fundamentos</option>
-                        <option>Unidad 2: Rutinas Diarias</option>
-                        <option>Unidad 3: Vocabulario y Práctica</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-difficulty">Nivel de Dificultad</label>
-                    <select class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary" id="lesson-difficulty">
-                        <option>A1 - Principiante</option>
-                        <option>A2 - Elemental</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Descripción del Contenido de la Lección -->
-            <div>
-                <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-description">Contenido de la Lección / Instrucciones</label>
-                <textarea class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary h-32" id="lesson-description" placeholder="Escribe la descripción o los bloques de código HTML aquí..."></textarea>
-            </div>
-
-            <!-- Botones de Acción -->
-            <div class="flex justify-end gap-sm pt-md border-t border-outline-variant">
-                <button type="button" class="px-md py-sm rounded-lg border border-outline-variant text-on-surface font-label-md hover:bg-surface-container-high transition-colors">
-                    Cancelar
-                </button>
-                <button type="button" class="px-md py-sm rounded-lg bg-primary text-on-primary font-label-md font-bold hover:opacity-90 transition-opacity shadow-sm">
-                    Guardar Lección
-                </button>
-            </div>
-        </form>
-    </div>
+  <!-- Main Content Area -->
+<main class="flex-1 md:ml-[280px] p-lg md:p-xl overflow-y-auto">
+<div class="max-w-container-max mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-lg gap-md">
+<div>
+<div class="flex items-center gap-sm mb-xs">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-xs font-label-md text-label-md" href="lesson.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                            Back to Lessons
+                        </a>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Lesson Editor</h2>
+<p class="text-on-surface-variant font-body-md text-body-md mt-xs">Create or modify lesson content.</p>
+</div>
+<!-- Action Buttons (Top) -->
+<div class="flex items-center gap-sm">
+<button class="px-md py-sm rounded-lg border border-secondary text-secondary font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+                        Cancelar
+                    </button>
+<button class="px-md py-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:opacity-90 transition-opacity">
+                        Guardar
+                    </button>
+<button class="px-md py-sm rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:opacity-90 transition-opacity shadow-sm">
+                        Publicar
+                    </button>
+</div>
+</div>
+<!-- Messages Placeholder (Hidden by default) -->
+<div class="hidden mb-md bg-[#e6f4ea] border border-[#34a853] text-[#137333] px-md py-sm rounded-lg flex items-center gap-sm shadow-sm" id="success-toast">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-label-md text-label-md">Lesson saved successfully.</span>
+</div>
+<div class="hidden mb-md bg-error-container text-on-error-container px-md py-sm rounded-lg flex items-center gap-sm shadow-sm" id="error-toast">
+<span class="material-symbols-outlined">error</span>
+<span class="font-label-md text-label-md">Please fill in all required fields.</span>
+</div>
+<!-- Editor Form Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-md">
+<!-- Main Content Column -->
+<div class="lg:col-span-2 space-y-md">
+<!-- Core Details Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md md:p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-high">
+<h3 class="font-headline-md text-headline-md text-primary mb-md pb-sm border-b border-surface-container">Basic Information</h3>
+<div class="space-y-md">
+<div>
+<label class="form-label font-label-md text-label-md" for="titulo">Título *</label>
+<input class="form-input" id="titulo" placeholder="e.g. Greetings and Introductions" type="text"/>
+</div>
+<div>
+<label class="form-label font-label-md text-label-md" for="resumen">Resumen</label>
+<textarea class="form-input resize-none" id="resumen" placeholder="Brief overview of the lesson objectives..." rows="2"></textarea>
+</div>
+<div>
+<label class="form-label font-label-md text-label-md" for="explicacion">Explicación *</label>
+<textarea class="form-input resize-y" id="explicacion" placeholder="Detailed grammatical or vocabulary explanation..." rows="6"></textarea>
+</div>
+</div>
+</div>
+<!-- Media & Examples Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md md:p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-high">
+<h3 class="font-headline-md text-headline-md text-primary mb-md pb-sm border-b border-surface-container">Content &amp; Media</h3>
+<div class="space-y-md">
+<div>
+<label class="form-label font-label-md text-label-md" for="ejemplo">Ejemplo</label>
+<textarea class="form-input resize-none" id="ejemplo" placeholder="Provide a dialogue or sentence example..." rows="3"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="form-label font-label-md text-label-md" for="tipo-multimedia">Tipo de multimedia</label>
+<div class="relative">
+<select class="form-input appearance-none" id="tipo-multimedia">
+<option value="">Select type...</option>
+<option value="audio">Audio</option>
+<option value="video">Video</option>
+<option value="image">Image</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-md text-outline">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="form-label font-label-md text-label-md" for="url">URL</label>
+<input class="form-input" id="url" placeholder="https://..." type="url"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Column (Settings) -->
+<div class="space-y-md">
+<!-- Taxonomy Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md md:p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-high">
+<h3 class="font-headline-md text-headline-md text-primary mb-md pb-sm border-b border-surface-container">Organization</h3>
+<div class="space-y-md">
+<div>
+<label class="form-label font-label-md text-label-md" for="unidad">Unidad</label>
+<div class="relative">
+<select class="form-input appearance-none" id="unidad">
+<option value="">Select unit...</option>
+<option value="1">Unit 1: Hello</option>
+<option value="2">Unit 2: Family</option>
+<option value="3">Unit 3: Work</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-md text-outline">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="form-label font-label-md text-label-md" for="posicion">Posición (Orden)</label>
+<input class="form-input" id="posicion" min="1" placeholder="1" type="number"/>
+</div>
+</div>
+</div>
+<!-- Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md md:p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-high">
+<h3 class="font-headline-md text-headline-md text-primary mb-md pb-sm border-b border-surface-container">Visibility</h3>
+<div class="flex items-center justify-between">
+<div>
+<label class="font-label-md text-label-md text-on-surface">Estado publicado</label>
+<p class="text-sm text-on-surface-variant mt-1">Make visible to students</p>
+</div>
+<!-- Custom Toggle -->
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-outline-variant appearance-none cursor-pointer z-10 top-0 left-0 transition-all duration-300" id="estado-publicado" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-all duration-300" for="estado-publicado"></label>
+</div>
+</div>
+</div>
+<!-- Decorative Graphic -->
+<div class="hidden lg:block bg-primary-fixed rounded-xl p-md text-center">
+<span class="material-symbols-outlined text-[48px] text-primary mb-sm">edit_document</span>
+<p class="font-label-md text-label-md text-primary">Keep lessons concise. Aim for a 5-minute read time.</p>
+</div>
+</div>
+</div>
+</div>
 </main>
-</body>
+</main>
+</body
+    
 </html>
