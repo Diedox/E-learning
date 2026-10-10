@@ -4,37 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson Editor - LinguaStep A1</title>
-
-    <!-- Google Fonts & Material Symbols -->
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
 
-    <!-- Tailwind CSS (CDN Engine) -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-    <!-- Shared Tailwind Configuration (Design Tokens) -->
     <script src="assets/js/tailwind.config.js"></script>
-
-    <!-- Shared Custom Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css" />
+    
 </head>
 <body class="bg-surface text-on-surface min-h-screen flex font-body-md text-body-md">
 
-<!-- SideNavBar (Shared Component) -->
+<!-- Barra Lateral de Navegación (Componente Compartido) -->
 <aside class="fixed left-0 top-0 h-full w-[280px] bg-surface-container-low border-r border-outline-variant flex flex-col p-md space-y-md hidden md:flex z-50">
-<!-- Header -->
+<!-- Encabezado -->
 <div class="px-md py-sm">
 <h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
 <p class="font-label-md text-label-md text-outline">Beginner Level</p>
 </div>
-<!-- Navigation -->
+<!-- Navegacion -->
 <nav class="flex-1 space-y-sm mt-md">
-<!-- Dashboard (Inactive) -->
+<!-- Dashboard (Inactivo) -->
 <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="teacher-dashboard.html">
 <span class="material-symbols-outlined">dashboard</span>
 <span>Dashboard</span>
 </a>
-<!-- My Lessons (Active - Mapping Lesson Editor intent here) -->
+<!-- My Lessons -->
 <a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold font-label-md text-label-md translate-x-1 transition-transform duration-200 shadow-sm" href="lesson.html">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
 <span>My Lessons</span>
@@ -61,7 +56,7 @@
                 Start Daily Lesson
             </button>
 </div>
-<!-- Footer Links -->
+<!-- Footer -->
 <div class="border-t border-outline-variant pt-md space-y-sm">
 <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md" href="#">
 <span class="material-symbols-outlined">help_outline</span>
@@ -73,5 +68,67 @@
 </a>
 </div>
 </aside>
+    <!-- Contenedor Principal del Contenido -->
+<main class="flex-1 md:ml-[280px] p-lg bg-surface min-h-screen">
+    <!-- Barra Superior de Encabezado -->
+    <header class="flex justify-between items-center mb-lg pb-md border-b border-outline-variant">
+        <div>
+            <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Lesson Editor</h2>
+            <p class="font-body-md text-body-md text-outline">Crea y personaliza contenido de aprendizaje interactivo para LinguaStep A1.</p>
+        </div>
+        <div class="flex items-center gap-md">
+            <span class="material-symbols-outlined text-primary text-xl">account_circle</span>
+            <span class="font-label-lg text-label-lg font-bold text-on-surface">Antuane</span>
+        </div>
+    </header>
+
+    <!-- Tarjeta del Formulario del Editor -->
+    <div class="bg-surface-container-low border border-outline-variant rounded-xl p-lg shadow-sm max-w-4xl">
+        <h3 class="font-headline-md text-headline-md font-bold text-primary mb-md">Detalles de la Nueva Lección</h3>
+        
+        <form class="space-y-md">
+            <!-- Campo de Título de la Lección -->
+            <div>
+                <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-title">Título de la Lección</label>
+                <input class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary" type="text" id="lesson-title" placeholder="ej., Saludos Básicos y Presentaciones" />
+            </div>
+
+            <!-- Selección de Unidad / Categoría -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                <div>
+                    <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-unit">Número de Unidad</label>
+                    <select class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary" id="lesson-unit">
+                        <option>Unidad 1: Fundamentos</option>
+                        <option>Unidad 2: Rutinas Diarias</option>
+                        <option>Unidad 3: Vocabulario y Práctica</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-difficulty">Nivel de Dificultad</label>
+                    <select class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary" id="lesson-difficulty">
+                        <option>A1 - Principiante</option>
+                        <option>A2 - Elemental</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Descripción del Contenido de la Lección -->
+            <div>
+                <label class="block font-label-md text-label-md text-on-surface-variant mb-xs" for="lesson-description">Contenido de la Lección / Instrucciones</label>
+                <textarea class="w-full bg-surface border border-outline-variant rounded-lg p-sm text-on-surface focus:outline-none focus:border-primary h-32" id="lesson-description" placeholder="Escribe la descripción o los bloques de código HTML aquí..."></textarea>
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="flex justify-end gap-sm pt-md border-t border-outline-variant">
+                <button type="button" class="px-md py-sm rounded-lg border border-outline-variant text-on-surface font-label-md hover:bg-surface-container-high transition-colors">
+                    Cancelar
+                </button>
+                <button type="button" class="px-md py-sm rounded-lg bg-primary text-on-primary font-label-md font-bold hover:opacity-90 transition-opacity shadow-sm">
+                    Guardar Lección
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
 </body>
 </html>
