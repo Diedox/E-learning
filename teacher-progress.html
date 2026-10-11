@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Progress Table - LinguaStep A1</title>
+
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+    <!-- Tailwind CSS (CDN Engine) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Shared Tailwind Configuration (Design Tokens) -->
+    <script src="assets/js/tailwind.config.js"></script>
+
+    <!-- Shared Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<!-- REACT COMPONENT HINT: <TeacherProgress /> -->
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex">
+
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex flex-col h-full w-[280px] p-md space-y-md bg-surface-container-low border-r border-outline-variant fixed left-0 top-0 z-50">
+<!-- Header -->
+<div class="flex items-center gap-sm mb-md">
+<img alt="Student Profile Picture" class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a teacher on a warm white background, smiling and approachable, wearing smart casual attire. Lighting is soft and even, highlighting their friendly demeanor. High quality, clear resolution, suitable for a professional educational profile." src="assets/img/teacher-2.jpg"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
+<p class="font-label-md text-label-md text-on-surface-variant">Beginner Level</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 space-y-base">
+<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold translate-x-1 transition-transform duration-200" href="teacher-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="teacher-dashboard.html">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md text-label-md">My Lessons</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="quiz-results.html">
+<span class="material-symbols-outlined">quiz</span>
+<span class="font-label-md text-label-md">Practice</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">Dictionary</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="question-management.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</div>
+<!-- CTA -->
+<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-on-secondary-container transition-colors mb-md">
+            Start Daily Lesson
+        </button>
+<!-- Footer Links -->
+<div class="mt-auto space-y-base pt-md border-t border-outline-variant">
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="login.html">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</nav>
+    
+
+
+</body>
+</html>
