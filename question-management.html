@@ -1,0 +1,144 @@
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-[280px] h-full overflow-y-auto bg-background p-md md:p-lg">
+<div class="max-w-container-max mx-auto space-y-xl">
+<!-- Page Header -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-primary">Question Management</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Create and organize practice questions for student lessons.</p>
+</div>
+<!-- Lesson Selector -->
+<div class="w-full md:w-64">
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="lesson-select">Select Lesson Context</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest border brand-input rounded-lg py-sm pl-md pr-xl font-body-md text-body-md text-on-surface" id="lesson-select">
+<option>Lesson 1: Greetings (A1)</option>
+<option>Lesson 2: Numbers &amp; Colors (A1)</option>
+<option>Lesson 3: Basic Verbs (A1)</option>
+</select>
+<span class="material-symbols-outlined absolute right-md top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</header>
+<!-- Layout Grid: Form (Left) & Table (Right) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-md xl:gap-lg items-start">
+<!-- Create Question Form -->
+<section class="xl:col-span-5 bg-surface-container-lowest rounded-[16px] p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest">
+<h3 class="font-headline-md text-headline-md text-primary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">add_circle</span>
+                        New Question
+                    </h3>
+<form class="space-y-md">
+<!-- Enunciado (Prompt) -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="enunciado">Enunciado (Prompt)</label>
+<textarea class="w-full bg-surface-bright border brand-input rounded-lg py-sm px-md font-body-md text-body-md text-on-surface" id="enunciado" placeholder="e.g., How do you say 'Hello' in formal settings?" rows="3"></textarea>
+</div>
+<!-- Options & Correct Answer -->
+<div>
+<fieldset>
+<legend class="block font-label-md text-label-md text-on-surface mb-2">Options &amp; Correct Answer</legend>
+<div class="space-y-sm">
+<div class="flex items-center gap-sm">
+<input class="text-secondary focus:ring-secondary w-5 h-5 border-outline-variant" id="opt1_correct" name="correct_answer" type="radio"/>
+<input class="flex-1 bg-surface-bright border brand-input rounded-lg py-sm px-md font-body-md text-body-md text-on-surface" placeholder="Option A" type="text"/>
+</div>
+<div class="flex items-center gap-sm">
+<input class="text-secondary focus:ring-secondary w-5 h-5 border-outline-variant" id="opt2_correct" name="correct_answer" type="radio"/>
+<input class="flex-1 bg-surface-bright border brand-input rounded-lg py-sm px-md font-body-md text-body-md text-on-surface" placeholder="Option B" type="text"/>
+</div>
+<div class="flex items-center gap-sm">
+<input class="text-secondary focus:ring-secondary w-5 h-5 border-outline-variant" id="opt3_correct" name="correct_answer" type="radio"/>
+<input class="flex-1 bg-surface-bright border brand-input rounded-lg py-sm px-md font-body-md text-body-md text-on-surface" placeholder="Option C" type="text"/>
+</div>
+<div class="flex items-center gap-sm">
+<input class="text-secondary focus:ring-secondary w-5 h-5 border-outline-variant" id="opt4_correct" name="correct_answer" type="radio"/>
+<input class="flex-1 bg-surface-bright border brand-input rounded-lg py-sm px-md font-body-md text-body-md text-on-surface" placeholder="Option D" type="text"/>
+</div>
+</div>
+</fieldset>
+</div>
+<!-- Explicación (Explanation) -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="explicacion">Explicación (Explanation)</label>
+<textarea class="w-full bg-surface-bright border brand-input rounded-lg py-sm px-md font-body-md text-body-md text-on-surface" id="explicacion" placeholder="Explain why the answer is correct for the student..." rows="2"></textarea>
+</div>
+<!-- Actions -->
+<div class="pt-sm flex justify-end gap-sm">
+<button class="px-md py-sm font-label-md text-label-md text-primary border border-outline-variant rounded-lg hover:bg-surface-container transition-colors" type="button">Clear</button>
+<button class="px-md py-sm font-label-md text-label-md font-bold bg-secondary text-on-secondary rounded-lg hover:bg-opacity-90 transition-colors shadow-sm" type="button">Save Question</button>
+</div>
+</form>
+</section>
+<!-- Existing Questions List -->
+<section class="xl:col-span-7 space-y-md">
+<!-- Search/Filter Bar -->
+<div class="flex items-center justify-between bg-surface-container-lowest rounded-lg p-sm border border-surface-container-highest shadow-[0px_4px_20px_rgba(18,48,74,0.05)]">
+<div class="relative flex-1 max-w-sm">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 py-sm pl-xl pr-md font-body-md text-body-md text-on-surface" placeholder="Search questions..." type="text"/>
+</div>
+<span class="text-on-surface-variant font-label-md text-label-md px-md">12 Questions</span>
+</div>
+<!-- Questions Container (Cards instead of simple table for better readability) -->
+<div class="space-y-sm">
+<!-- Question Card 1 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start gap-md">
+<div class="flex-1">
+<div class="flex items-center gap-xs mb-1">
+<span class="bg-surface-container-high text-on-surface-variant text-[12px] font-bold px-2 py-1 rounded">Q1</span>
+<span class="text-secondary text-[12px] font-bold">Multiple Choice</span>
+</div>
+<h4 class="font-headline-md text-[20px] leading-tight text-primary mb-2">Translate "Good Morning" to Spanish.</h4>
+<div class="grid grid-cols-2 gap-sm mt-sm">
+<div class="bg-surface-container text-on-surface px-sm py-1 rounded text-sm border border-secondary bg-secondary-container bg-opacity-20 flex items-center justify-between">
+<span>A) Buenos días</span> <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+</div>
+<div class="bg-surface-container-low text-on-surface-variant px-sm py-1 rounded text-sm">B) Buenas noches</div>
+<div class="bg-surface-container-low text-on-surface-variant px-sm py-1 rounded text-sm">C) Hola</div>
+<div class="bg-surface-container-low text-on-surface-variant px-sm py-1 rounded text-sm">D) Adiós</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-primary bg-surface-container hover:bg-surface-container-high rounded-full transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-2 text-error bg-error-container bg-opacity-30 hover:bg-opacity-50 rounded-full transition-colors delete-btn" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Question Card 2 -->
+<div class="bg-surface-container-lowest rounded-[16px] p-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest group hover:border-secondary transition-colors">
+<div class="flex justify-between items-start gap-md">
+<div class="flex-1">
+<div class="flex items-center gap-xs mb-1">
+<span class="bg-surface-container-high text-on-surface-variant text-[12px] font-bold px-2 py-1 rounded">Q2</span>
+</div>
+<h4 class="font-headline-md text-[20px] leading-tight text-primary mb-2">Which pronoun is used for formal "You"?</h4>
+<div class="grid grid-cols-2 gap-sm mt-sm">
+<div class="bg-surface-container-low text-on-surface-variant px-sm py-1 rounded text-sm">A) Tú</div>
+<div class="bg-surface-container text-on-surface px-sm py-1 rounded text-sm border border-secondary bg-secondary-container bg-opacity-20 flex items-center justify-between">
+<span>B) Usted</span> <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+</div>
+<div class="bg-surface-container-low text-on-surface-variant px-sm py-1 rounded text-sm">C) Él</div>
+<div class="bg-surface-container-low text-on-surface-variant px-sm py-1 rounded text-sm">D) Nosotros</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-primary bg-surface-container hover:bg-surface-container-high rounded-full transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-2 text-error bg-error-container bg-opacity-30 hover:bg-opacity-50 rounded-full transition-colors delete-btn" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
