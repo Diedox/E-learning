@@ -1,3 +1,30 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Management - LinguaStep A1</title>
+
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+    <!-- Tailwind CSS (CDN Engine) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Shared Tailwind Configuration (Design Tokens) -->
+    <script src="assets/js/tailwind.config.js"></script>
+
+    <!-- Shared Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<!-- REACT COMPONENT HINT: <QuestionManagement /> -->
+<body class="font-body-md text-body-md antialiased flex h-screen overflow-hidden">
+
+
+
+
+
 <!-- Main Content Area -->
 <main class="flex-1 ml-0 md:ml-[280px] h-full overflow-y-auto bg-background p-md md:p-lg">
 <div class="max-w-container-max mx-auto space-y-xl">
@@ -142,3 +169,24 @@
 </div>
 </div>
 </main>
+<!-- Delete Confirmation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-primary bg-opacity-50 backdrop-blur-sm hidden" id="deleteModal">
+<div class="bg-surface-container-lowest rounded-[16px] p-lg w-[90%] max-w-md shadow-lg border border-surface-container-highest transform scale-95 opacity-0 transition-all duration-200" id="deleteModalContent">
+<div class="flex items-center gap-sm text-error mb-md">
+<span class="material-symbols-outlined text-3xl">warning</span>
+<h3 class="font-headline-md text-headline-md text-primary">Eliminar pregunta</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                ¿Estás seguro de que deseas eliminar esta pregunta? Esta acción no se puede deshacer y se eliminará de todas las lecciones asociadas.
+            </p>
+<div class="flex justify-end gap-sm">
+<button class="px-md py-sm font-label-md text-label-md text-primary border border-outline-variant rounded-lg hover:bg-surface-container transition-colors" id="cancelDelete" type="button">Cancelar</button>
+<button class="px-md py-sm font-label-md text-label-md font-bold bg-error text-on-error rounded-lg hover:bg-opacity-90 transition-colors shadow-sm" type="button">Sí, eliminar</button>
+</div>
+</div>
+</div>
+<!-- Script for Modal Interaction -->
+
+</body>
+</html>
+
