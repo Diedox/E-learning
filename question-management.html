@@ -21,10 +21,55 @@
 <!-- REACT COMPONENT HINT: <QuestionManagement /> -->
 <body class="font-body-md text-body-md antialiased flex h-screen overflow-hidden">
 
-
-
-
-
+<!-- SideNavBar (from JSON, mapped to Settings as intent since it's an admin page) -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-surface-container-low border-r border-outline-variant flex flex-col p-md space-y-md z-20 hidden md:flex">
+<!-- Header/Brand -->
+<div class="flex items-center gap-sm mb-lg">
+<img alt="Student Profile Picture" class="w-12 h-12 rounded-full object-cover" data-alt="A small, professional 3D rendered avatar of a student on a solid soft white background. The avatar is minimalist, well-lit, and suitable for a clean, modern user interface. Vibrant turquoise and yellow subtle accents in the clothing." src="assets/img/avatar-student-3.jpg"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
+<p class="font-label-md text-label-md text-on-surface-variant">Beginner Level</p>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg" href="teacher-dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg" href="lesson.html">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+                My Lessons
+            </a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg" href="quiz-results.html">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+                Practice
+            </a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                Dictionary
+            </a>
+<!-- Active State: Mapped to Settings for Admin tasks -->
+<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold font-label-md text-label-md translate-x-1 transition-transform duration-200" href="question-management.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<!-- CTA & Footer Tabs -->
+<div class="mt-auto space-y-md">
+<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md font-bold py-sm px-md rounded-lg hover:bg-opacity-90 transition-colors">Start Daily Lesson</button>
+<div class="pt-md border-t border-outline-variant space-y-2">
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                    Help Center
+                </a>
+<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg" href="login.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Logout
+                </a>
+</div>
+</div>
+</aside>
 <!-- Main Content Area -->
 <main class="flex-1 ml-0 md:ml-[280px] h-full overflow-y-auto bg-background p-md md:p-lg">
 <div class="max-w-container-max mx-auto space-y-xl">
