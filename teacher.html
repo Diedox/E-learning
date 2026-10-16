@@ -7,66 +7,137 @@
 </head>
 <body>
 
-  <header>
-    <h1>LinguaStep A1</h1>
-    <nav>
+  <aside aria-label="Barra lateral">
+    <header>
+      <p><a href="index.html">LinguaStep A1</a></p>
+
+      <section aria-label="Perfil">
+        <p><strong>LinguaStep A1</strong></p>
+        <p>Beginner Level</p>
+      </section>
+
+      <a href="lesson.html">Start Daily Lesson</a>
+    </header>
+
+    <nav aria-label="Navegación principal">
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="login.html">Acceso</a></li>
-        <li><a href="student.html">Estudiante</a></li>
-        <li><a href="teacher.html">Profesor</a></li>
+        <li><a href="teacher.html" aria-current="page">Dashboard</a></li>
+        <li><a href="lesson.html">My Lessons</a></li>
+        <li><a href="question-management.html">Practice</a></li>
+        <li><a href="#">Dictionary</a></li>
+        <li><a href="#">Settings</a></li>
       </ul>
     </nav>
-  </header>
+
+    <footer>
+      <nav aria-label="Ayuda y sesión">
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </aside>
 
   <main>
 
-    <section>
-      <h2>Crear lección</h2>
-      <form action="#" method="post">
-        <p>
-          <label for="unidad">Unidad (1 a 4)</label><br>
-          <input type="number" id="unidad" name="unidad" min="1" max="4" required>
-        </p>
-        <p>
-          <label for="titulo">Título</label><br>
-          <input type="text" id="titulo" name="titulo" required>
-        </p>
-        <p>
-          <label for="resumen">Resumen</label><br>
-          <textarea id="resumen" name="resumen" rows="3" required></textarea>
-        </p>
-        <p>
-          <label for="publicada">¿Publicada?</label>
-          <select id="publicada" name="publicada">
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
-        </p>
-        <button type="submit">Guardar lección</button>
-      </form>
+    <header>
+      <hgroup>
+        <h1>Teacher Dashboard</h1>
+        <p>Manage your curriculum and track student progress.</p>
+      </hgroup>
+      <a href="lesson-editor.html">Nueva lección</a>
+    </header>
+
+    <section aria-labelledby="estadisticas-titulo">
+      <h2 id="estadisticas-titulo" hidden>Estadísticas</h2>
+      <ul>
+        <li>
+          <article>
+            <h3>Total Lessons</h3>
+            <p><data value="42">42</data></p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Published Lessons</h3>
+            <p><data value="38">38</data></p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Students with Progress</h3>
+            <p><data value="156">156</data></p>
+          </article>
+        </li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Añadir pregunta</h2>
-      <form action="#" method="post">
-        <p>
-          <label for="enunciado">Enunciado</label><br>
-          <input type="text" id="enunciado" name="enunciado" required>
-        </p>
-        <p>
-          <label for="respuesta">Respuesta correcta</label><br>
-          <input type="text" id="respuesta" name="respuesta" required>
-        </p>
-        <button type="submit">Guardar pregunta</button>
-      </form>
+    <section aria-labelledby="gestion-titulo">
+      <h2 id="gestion-titulo" hidden>Gestión del curso</h2>
+
+      <nav aria-label="Secciones del panel">
+        <ul>
+          <li><a href="#resumen">Resumen</a></li>
+          <li><a href="#lecciones" aria-current="true">Lecciones</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="teacher-progress.html">Progreso</a></li>
+        </ul>
+      </nav>
+
+      <section id="lecciones" aria-label="Lecciones">
+        <table>
+          <caption>Lista de lecciones</caption>
+          <thead>
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Unidad</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Greetings &amp; Introductions</th>
+              <td>Unit 1</td>
+              <td>Published</td>
+              <td>
+                <a href="lesson-editor.html" aria-label="Editar Greetings &amp; Introductions">Editar</a>
+                <button type="button" aria-label="Eliminar Greetings &amp; Introductions">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Numbers 1-20</th>
+              <td>Unit 1</td>
+              <td>Published</td>
+              <td>
+                <a href="lesson-editor.html" aria-label="Editar Numbers 1-20">Editar</a>
+                <button type="button" aria-label="Eliminar Numbers 1-20">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Basic Verbs: To Be</th>
+              <td>Unit 2</td>
+              <td>Draft</td>
+              <td>
+                <a href="lesson-editor.html" aria-label="Editar Basic Verbs: To Be">Editar</a>
+                <button type="button" aria-label="Eliminar Basic Verbs: To Be">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <footer>
+          <p>Showing 1-3 of 42 lessons</p>
+          <nav aria-label="Paginación">
+            <button type="button" disabled>Prev</button>
+            <button type="button">Next</button>
+          </nav>
+        </footer>
+      </section>
     </section>
 
   </main>
-
-  <footer>
-    <p>&copy; 2026 LinguaStep A1 - UTP</p>
-  </footer>
 
 </body>
 </html>
