@@ -1,80 +1,108 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="light" lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acceso - LinguaStep A1</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinguaStep A1 - Iniciar Sesión / Registrarse</title>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+  <!-- Tailwind CSS (CDN Engine) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Shared Tailwind Configuration (Design Tokens) -->
+  <script src="assets/js/tailwind.config.js"></script>
+
+  <!-- Shared Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
 
-  <header>
-    <h1>LinguaStep A1</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="login.html">Acceso</a></li>
-        <li><a href="student.html">Estudiante</a></li>
-        <li><a href="teacher.html">Profesor</a></li>
-      </ul>
-    </nav>
-  </header>
+<main>
 
-  <main>
+  <body class="bg-surface text-on-surface min-h-screen flex items-center justify-center p-md md:p-lg">
 
-    <section id="presentacion">
-      <h2>Aprende inglés desde cero</h2>
-      <img src="assets/imagen_index.png" alt="Estudiante aprendiendo idiomas" width="300">
-      <p>Curso paso a paso diseñado para principiantes. Empieza tu camino hoy.</p>
-    </section>
+    <div
+      class="w-full max-w-container-max bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] overflow-hidden flex flex-col md:flex-row h-full min-h-[700px]">
+      <!-- Left Side: Educational Illustration -->
+      <div class="hidden md:flex md:w-1/2 bg-surface-container-low flex-col items-center justify-center p-xl relative">
+        <div class="absolute top-md left-md flex items-center gap-xs text-primary">
+          <span class="material-symbols-outlined text-headline-md">school</span>
+          <span class="font-headline-md text-headline-md font-bold">LinguaStep A1</span>
+        </div>
+        <div
+          class="w-full max-w-[400px] mb-lg relative aspect-square rounded-full overflow-hidden bg-secondary-container/20 flex items-center justify-center">
+          <img class="object-cover w-full h-full p-md"
+            data-alt="A clean, modern illustration of a student interacting with digital floating language flashcards. The scene is brightly lit with soft shadows on a warm white background. Subtle accents of turquoise and deep navy blue highlight the digital elements. The overall aesthetic is minimalist, encouraging, and professional, suitable for a modern educational platform."
+            src="assets/img/home-hero.jpg" />
+        </div>
+        <div class="text-center max-w-md">
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Bridge the gap to fluency.</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">Step-by-step English learning designed
+            specifically for absolute beginners. Start your journey today.</p>
+        </div>
+      </div>
+      <!-- Right Side: Forms -->
+      <div
+        class="w-full md:w-1/2 p-lg md:p-xl flex flex-col justify-center bg-surface-container-lowest relative overflow-hidden">
+        <!-- Mobile Logo -->
+        <div class="md:hidden flex items-center justify-center gap-xs text-primary mb-xl">
+          <span class="material-symbols-outlined text-headline-md">school</span>
+          <span class="font-headline-md text-headline-md font-bold">LinguaStep A1</span>
+        </div>
+        <!-- Tab -->
+        <div class="flex border-b border-outline-variant mb-xl w-full max-w-sm mx-auto">
+          <button class="flex-1 py-sm font-label-md text-label-md text-secondary border-b-2 border-secondary font-bold"
+            id="tab-login" onclick="switchTab('login')">
+            Iniciar sesión
+          </button>
+          <button
+            class="flex-1 py-sm font-label-md text-label-md text-on-surface-variant font-medium hover:text-secondary transition-colors"
+            id="tab-register" onclick="switchTab('register')">
+            Registrarse
+          </button>
+        </div>
+        <!-- Login Form -->
+        <div class="form-container active-form w-full max-w-sm mx-auto" id="form-login">
+          <h3 class="font-headline-md text-headline-md text-primary mb-sm">Bienvenido de nuevo</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-lg">Por favor, ingresa tus datos para
+            continuar.</p>
+          <form class="space-y-md" onsubmit="event.preventDefault(); window.location.href='student-dashboard.html';">
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface mb-xs" for="login-email">Correo
+                electrónico</label>
+              <div class="relative">
+                <span
+                  class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">mail</span>
+                <input
+                  class="w-full pl-xl pr-sm py-sm rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md text-body-md text-on-surface"
+                  id="login-email" placeholder="ejemplo@correo.com" type="email" />
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-xs">
+                <label class="block font-label-md text-label-md text-on-surface" for="login-password">Contraseña</label>
+                <a class="font-label-md text-label-md text-secondary hover:underline" href="#">¿Olvidaste tu
+                  contraseña?</a>
+              </div>
+              <div class="relative">
+                <span
+                  class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">lock</span>
+                <input
+                  class="w-full pl-xl pr-sm py-sm rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md text-body-md text-on-surface"
+                  id="login-password" placeholder="••••••••" type="password" />
+              </div>
 
-    <section id="iniciar-sesion">
-      <h2>Iniciar sesión</h2>
-      <p>Ingresa tus datos para continuar.</p>
+</main>
 
-      <form action="#" method="post">
-        <p>
-          <label for="login-email">Correo electrónico</label><br>
-          <input type="email" id="login-email" name="email"
-                 placeholder="ejemplo@correo.com" required autocomplete="email">
-        </p>
-        <p>
-          <label for="login-password">Contraseña</label><br>
-          <input type="password" id="login-password" name="password"
-                 placeholder="********" required autocomplete="current-password">
-        </p>
-        <button type="submit">Ingresar</button>
-      </form>
-    </section>
-
-    <section id="registro">
-      <h2>Crear cuenta</h2>
-      <p>¿No tienes cuenta? Regístrate aquí.</p>
-
-      <form action="#" method="post">
-        <p>
-          <label for="reg-nombre">Nombre completo</label><br>
-          <input type="text" id="reg-nombre" name="nombre"
-                 placeholder="Tu nombre" required autocomplete="name">
-        </p>
-        <p>
-          <label for="reg-email">Correo electrónico</label><br>
-          <input type="email" id="reg-email" name="email"
-                 placeholder="ejemplo@correo.com" required autocomplete="email">
-        </p>
-        <p>
-          <label for="reg-password">Contraseña</label><br>
-          <input type="password" id="reg-password" name="password"
-                 placeholder="********" required autocomplete="new-password">
-        </p>
-        <button type="submit">Registrarme</button>
-      </form>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 LinguaStep A1 - UTP</p>
-  </footer>
+<footer>
+  <p>&copy; 2026 LinguaStep A1 - UTP</p>
+</footer>
 
 </body>
+
 </html>
