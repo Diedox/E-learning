@@ -96,13 +96,35 @@
                   class="w-full pl-xl pr-sm py-sm rounded-lg border border-outline-variant bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md text-body-md text-on-surface"
                   id="login-password" placeholder="••••••••" type="password" />
               </div>
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-xs" for="register-confirm">Confirmar
+                  contraseña</label>
+                <div class="relative">
+                  <span
+                    class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">lock_reset</span>
+                  <input
+                    class="w-full pl-xl pr-sm py-sm rounded-lg border border-error bg-surface focus:border-error focus:ring-1 focus:ring-error outline-none transition-all font-body-md text-body-md text-on-surface"
+                    id="register-confirm" placeholder="Repite la contraseña" type="password" />
+                </div>
 
-</main>
 
-<footer>
-  <p>&copy; 2026 LinguaStep A1 - UTP</p>
-</footer>
+                <p class="text-error font-body-md text-sm mt-xs flex items-center gap-xs"><span
+                    class="material-symbols-outlined text-sm">error</span> Las contraseñas no coinciden.</p>
+              </div>
+              <button
+                class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-on-secondary-container transition-colors shadow-sm mt-lg"
+                type="submit">
+                Registrarse
+              </button>
+              <p class="font-body-md text-sm text-on-surface-variant text-center mt-sm">
+                Al registrarte, aceptas nuestros <a class="text-secondary hover:underline" href="#">Términos</a> y <a
+                  class="text-secondary hover:underline" href="#">Privacidad</a>.
+              </p>
+          </form>
+        </div>
+      </div>
+    </div>
 
-</body>
+  </body>
 
 </html>
