@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinguaStep A1 - Student Dashboard</title>
+</head>
+<body>
+
+    <!-- Navegación lateral -->
+    <nav>
+        <div>
+            <img src="assets/img/student-male.jpg" alt="Student Profile Picture" width="48" height="48" />
+            <h1>LinguaStep A1</h1>
+            <p>Beginner Level</p>
+        </div>
+
+        <a href="lesson.html">Start Daily Lesson</a>
+
+        <ul>
+            <li><a href="student-dashboard.html">Dashboard</a></li>
+            <li><a href="lesson.html">My Lessons</a></li>
+            <li><a href="quiz-results.html">Practice</a></li>
+            <li><a href="#">Dictionary</a></li>
+            <li><a href="question-management.html">Settings</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <header>
+            <h2>Hello, Alejandro</h2>
+            <p>Ready to continue your English journey?</p>
+            <a href="lesson.html">Continuar aprendiendo</a>
+        </header>
+
+        <!-- Progreso del curso -->
+        <section>
+            <h3>Course Progress</h3>
+            <p>A1 Beginner Track</p>
+            <p><strong>45%</strong></p>
+            <progress value="45" max="100">45%</progress>
+            <p>Keep it up! 55% remaining.</p>
+        </section>
+
+        <!-- Unidades -->
+        <section>
+            <h3>Your Units</h3>
+
+            <article>
+                <h4>Greetings</h4>
+                <p>Completed</p>
+                <button type="button">Review</button>
+            </article>
+
+            <article>
+                <h4>Numbers</h4>
+                <p>In Progress</p>
+                <a href="lesson.html">Continue</a>
+            </article>
+
+            <article>
+                <h4>Family</h4>
+                <p>Available</p>
+                <button type="button">Start</button>
+            </article>
+
+            <article>
+                <h4>Routines</h4>
+                <p>Unlock at 60%</p>
+                <button type="button" disabled>Locked</button>
+            </article>
+        </section>
+
+        <!-- Actividad reciente -->
+        <section>
+            <h3>Recent Activity</h3>
+            <a href="#">View All</a>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lección</th>
+                        <th>Puntaje</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Numbers 1-10</td>
+                        <td>85/100</td>
+                        <td>En Progreso</td>
+                        <td>Hoy, 10:30 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Basic Greetings</td>
+                        <td>100/100</td>
+                        <td>Completado</td>
+                        <td>Ayer, 14:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Alphabet Intro</td>
+                        <td>95/100</td>
+                        <td>Completado</td>
+                        <td>12 Oct, 09:00 AM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>

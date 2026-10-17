@@ -1,12 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-  
-  </body>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers 1-10 - LinguaStep A1</title>
+</head>
+<body>
+
+    <!-- Navegación lateral -->
+    <nav>
+        <div>
+            <img src="assets/img/student-male.jpg" alt="Student Profile Picture" width="48" height="48" />
+            <h1>LinguaStep A1</h1>
+            <p>Beginner Level</p>
+        </div>
+
+        <a href="lesson.html">Start Daily Lesson</a>
+
+        <ul>
+            <li><a href="student-dashboard.html">Dashboard</a></li>
+            <li><a href="lesson.html">My Lessons</a></li>
+            <li><a href="quiz-results.html">Practice</a></li>
+            <li><a href="#">Dictionary</a></li>
+            <li><a href="question-management.html">Settings</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <header>
+            <nav aria-label="Breadcrumb">
+                <a href="student-dashboard.html">Home</a> &gt;
+                <a href="#">Unit 1</a> &gt;
+                <span>Lesson 1</span>
+            </nav>
+            <p>Unit 1: Fundamentals</p>
+            <h2>Numbers 1-10</h2>
+        </header>
+
+        <!-- Explicación -->
+        <section>
+            <h3>Explicación</h3>
+            <p>En esta lección, aprenderemos los números básicos en inglés del 1 al 10. Estos son fundamentales para contar, decir tu edad, y expresar cantidades.</p>
+            <p>Presta especial atención a la pronunciación del número 3 ("three"), colocando la lengua entre los dientes.</p>
+        </section>
+
+        <!-- Vocabulario -->
+        <section>
+            <h3>Vocabulary List</h3>
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>Five</li>
+                <li>Six</li>
+                <li>Seven</li>
+                <li>Eight</li>
+                <li>Nine</li>
+                <li>Ten</li>
+            </ol>
+        </section>
+
+        <!-- Material multimedia -->
+        <section>
+            <h3>Learn</h3>
+
+            <article>
+                <h4>Visual Guide</h4>
+                <img src="assets/imagen_index.png" alt="Numbers visual" width="320" />
+            </article>
+
+            <article>
+                <h4>Listen &amp; Repeat</h4>
+                <p>Hear native pronunciation</p>
+                <audio controls src="assets/welcome-to-english-a1.mp3">
+                    Tu navegador no soporta audio.
+                </audio>
+            </article>
+
+            <article>
+                <h4>Watch Lesson</h4>
+                <video controls width="320" src="assets/english-a1-intro.mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </article>
+        </section>
+
+        <!-- Práctica -->
+        <section>
+            <h3>Practice</h3>
+            <form id="practice-form" action="quiz-results.html">
+                <fieldset>
+                    <legend>1. How do you spell the number 5?</legend>
+                    <label><input type="radio" name="q1" value="a" required /> Fiv</label><br />
+                    <label><input type="radio" name="q1" value="b" /> Five</label><br />
+                    <label><input type="radio" name="q1" value="c" /> Fibe</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. What number comes after seven?</legend>
+                    <label><input type="radio" name="q2" value="a" required /> Eight</label><br />
+                    <label><input type="radio" name="q2" value="b" /> Six</label><br />
+                    <label><input type="radio" name="q2" value="c" /> Nine</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Choose the correct translation for "Ocho":</legend>
+                    <label><input type="radio" name="q3" value="a" required /> Four</label><br />
+                    <label><input type="radio" name="q3" value="b" /> Ten</label><br />
+                    <label><input type="radio" name="q3" value="c" /> Eight</label>
+                </fieldset>
+
+                <button type="submit">Enviar respuestas</button>
+            </form>
+        </section>
+    </main>
+
+</body>
 </html>
