@@ -1,7 +1,4 @@
-/**
- * LinguaStep A1 - Tailwind CSS Configuration
- * Exported for Browser CDN and future React / Vite / Next.js builds.
- */
+
 const tailwindConfig = {
   darkMode: "class",
   theme: {
@@ -103,13 +100,9 @@ const tailwindConfig = {
     }
   }
 };
-
-// Browser Tailwind CDN support
 if (typeof tailwind !== 'undefined') {
   tailwind.config = tailwindConfig;
 }
-
-// CommonJS / Node support for future React setup (e.g., tailwind.config.cjs)
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = tailwindConfig;
 }

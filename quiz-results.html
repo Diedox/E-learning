@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Results - LinguaStep A1</title>
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+    <script src="assets/js/tailwind.config.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased flex h-screen overflow-hidden">
+
+
+    <nav
+        class="hidden md:flex flex-col h-full w-[280px] p-md space-y-md bg-surface-container-low border-r border-outline-variant z-10">
+
+        <div class="mb-lg px-sm">
+            <h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
+        </div>
+
+        <div class="flex-1 space-y-2">
+
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                href="student-dashboard.html">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                <span class="font-label-md text-label-md">Dashboard</span>
+            </a>
+
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                href="lesson.html">
+                <span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+                <span class="font-label-md text-label-md">My Lessons</span>
+            </a>
+
+            <a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold translate-x-1 transition-transform duration-200"
+                href="quiz-results.html">
+                <span class="material-symbols-outlined fill" data-icon="quiz">quiz</span>
+                <span class="font-label-md text-label-md">Practice</span>
+            </a>
+
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                <span class="font-label-md text-label-md">Dictionary</span>
+            </a>
+
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                href="question-management.html">
+                <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <span class="font-label-md text-label-md">Settings</span>
+            </a>
+        </div>
+
+        <div class="mt-auto space-y-md">
+            <button
+                class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-3 rounded-full hover:bg-secondary/90 transition-colors shadow-sm">
+                Start Daily Lesson
+            </button>
+            <div class="border-t border-outline-variant pt-md space-y-2">
+                <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                    href="#">
+                    <span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                    <span class="font-label-md text-label-md">Help Center</span>
+                </a>
+                <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                    href="login.html">
+                    <span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    <span class="font-label-md text-label-md">Logout</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-sm px-md py-sm mt-md">
+                <img alt="Student Profile Picture"
+                    class="w-10 h-10 rounded-full bg-surface-container-high object-cover border border-outline-variant"
+                    data-alt="A small circular avatar placeholder image for a student profile picture, minimalist style with soft lighting."
+                    src="assets/img/avatar-placeholder.webp" />
+                <div>
+                    <div class="font-label-md text-label-md text-primary">Student</div>
+                    <div class="text-[12px] text-on-surface-variant">Beginner Level</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1 flex flex-col overflow-y-auto w-full relative">
+
+        <div
+            class="md:hidden flex items-center justify-between p-md border-b border-outline-variant bg-surface sticky top-0 z-20">
+            <h1 class="font-headline-md text-headline-md font-bold text-primary">Practice</h1>
+            <button class="text-on-surface-variant">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div
+            class="max-w-container-max mx-auto w-full p-md md:p-xl flex-1 flex flex-col lg:flex-row gap-xl items-start justify-center pt-xl">
+
+            <div class="w-full lg:w-1/2 flex flex-col items-center justify-center text-center space-y-lg">
+                <h2 class="font-headline-xl text-headline-xl text-primary mt-md hidden md:block">¡Excelente trabajo!
+                </h2>
+                <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-md md:hidden">¡Excelente
+                    trabajo!</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                    You've made great progress today. Review your answers to solidify your learning.
+                </p>
+
+                <div class="relative w-64 h-64 flex items-center justify-center my-xl">
+
+                    <svg class="w-full h-full absolute inset-0" viewbox="0 0 100 100">
+                        <circle class="text-surface-container-highest stroke-current" cx="50" cy="50" fill="transparent"
+                            r="40" stroke-width="8"></circle>
+
+                        <circle class="text-secondary stroke-current progress-ring__circle" cx="50" cy="50"
+                            fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="37.68"
+                            stroke-linecap="round" stroke-width="8"></circle>
+                    </svg>
+
+                    <div class="flex flex-col items-center z-10">
+                        <span class="text-display-lg font-bold text-secondary tracking-tighter">85%</span>
+                        <span
+                            class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mt-1">Score</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-surface-container-low border border-outline-variant rounded-2xl p-4 flex items-center gap-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] w-full max-w-sm">
+                    <div
+                        class="w-12 h-12 rounded-full bg-tertiary-fixed-dim/20 flex items-center justify-center text-tertiary-container">
+                        <span class="material-symbols-outlined fill text-[28px]">military_tech</span>
+                    </div>
+                    <div class="text-left flex-1">
+                        <p class="font-label-md text-label-md text-primary">Milestone Reached</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant">+150 XP towards Level 2</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-sm w-full max-w-sm pt-md">
+                    <button
+                        class="flex-1 border-2 border-secondary text-secondary font-label-md text-label-md py-4 px-6 rounded-full hover:bg-secondary/5 transition-colors focus:outline-none focus:ring-2 focus:ring-secondary/50">
+                        Reintentar
+                    </button>
+                    <button
+                        class="flex-1 bg-secondary text-on-secondary font-label-md text-label-md py-4 px-6 rounded-full hover:bg-secondary/90 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-surface">
+                        Volver al dashboard
+                    </button>
+                </div>
+            </div>
+
+            <div
+                class="w-full lg:w-1/2 bg-surface-container-lowest rounded-3xl p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest">
+                <div class="flex items-center justify-between mb-lg">
+                    <h3 class="font-headline-md text-headline-md text-primary">Summary</h3>
+                    <span
+                        class="font-label-md text-label-md text-on-surface-variant bg-surface-container-low px-3 py-1 rounded-full">17/20
+                        Correct</span>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-md">
+
+                    <div
+                        class="bg-surface rounded-xl p-4 border border-outline-variant flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q1</span>
+                        <span class="material-symbols-outlined text-secondary fill text-[32px]">check_circle</span>
+                    </div>
+
+                    <div
+                        class="bg-surface rounded-xl p-4 border border-outline-variant flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q2</span>
+                        <span class="material-symbols-outlined text-secondary fill text-[32px]">check_circle</span>
+                    </div>
+
+                    <div
+                        class="bg-error-container/30 rounded-xl p-4 border border-error/20 flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q3</span>
+                        <span class="material-symbols-outlined text-error fill text-[32px]">cancel</span>
+                    </div>
+
+                    <div
+                        class="bg-surface rounded-xl p-4 border border-outline-variant flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q4</span>
+                        <span class="material-symbols-outlined text-secondary fill text-[32px]">check_circle</span>
+                    </div>
+
+                    <div
+                        class="bg-surface rounded-xl p-4 border border-outline-variant flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q5</span>
+                        <span class="material-symbols-outlined text-secondary fill text-[32px]">check_circle</span>
+                    </div>
+
+                    <div
+                        class="bg-surface rounded-xl p-4 border border-outline-variant flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q6</span>
+                        <span class="material-symbols-outlined text-secondary fill text-[32px]">check_circle</span>
+                    </div>
+
+                    <div
+                        class="bg-error-container/30 rounded-xl p-4 border border-error/20 flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q7</span>
+                        <span class="material-symbols-outlined text-error fill text-[32px]">cancel</span>
+                    </div>
+
+                    <div
+                        class="bg-surface rounded-xl p-4 border border-outline-variant flex flex-col items-center justify-center gap-2 hover:shadow-sm transition-shadow">
+                        <span class="font-label-md text-label-md text-on-surface-variant">Q8</span>
+                        <span class="material-symbols-outlined text-secondary fill text-[32px]">check_circle</span>
+                    </div>
+
+                    <div
+                        class="bg-surface-container-low rounded-xl p-4 border border-dashed border-outline-variant flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-surface-container-high transition-colors">
+                        <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                        <span class="font-label-md text-label-md text-on-surface-variant text-[12px]">View All 20</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

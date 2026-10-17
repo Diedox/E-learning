@@ -1,12 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-  
-  </body>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers 1-10 - LinguaStep A1</title>
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+    <script src="assets/js/tailwind.config.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body-md h-screen flex overflow-hidden antialiased">
+
+
+    <nav
+        class="hidden md:flex fixed left-0 top-0 h-full w-[280px] bg-surface-container-low border-r border-outline-variant flex-col p-md space-y-md z-50">
+        <div class="flex items-center gap-sm mb-lg">
+            <img alt="Student Profile Picture" class="w-12 h-12 rounded-full object-cover"
+                data-alt="A clean, professional circular avatar showing a young adult student studying happily in a modern light-mode setting. Soft lighting, encouraging vibe. Focus on the face."
+                src="assets/img/avatar-student-4.webp" />
+            <div>
+                <h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
+                <p class="font-label-md text-label-md text-on-surface-variant">Beginner Level</p>
+            </div>
+        </div>
+        <button
+            class="w-full bg-secondary text-on-secondary font-label-md text-label-md font-bold py-sm px-md rounded-full shadow-[0px_4px_20px_rgba(18,48,74,0.05)] hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] transition-all mb-lg">Start
+            Daily Lesson</button>
+        <ul class="flex-1 space-y-sm">
+            <li><a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                    href="student-dashboard.html"><span class="material-symbols-outlined"
+                        data-icon="dashboard">dashboard</span> <span
+                        class="font-label-md text-label-md">Dashboard</span></a></li>
+            <li><a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold translate-x-1 transition-transform duration-200"
+                    href="lesson.html"><span class="material-symbols-outlined"
+                        data-icon="auto_stories">auto_stories</span> <span class="font-label-md text-label-md">My
+                        Lessons</span></a></li>
+            <li><a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                    href="quiz-results.html"><span class="material-symbols-outlined" data-icon="quiz">quiz</span> <span
+                        class="font-label-md text-label-md">Practice</span></a></li>
+            <li><a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                    href="#"><span class="material-symbols-outlined" data-icon="menu_book">menu_book</span> <span
+                        class="font-label-md text-label-md">Dictionary</span></a></li>
+            <li><a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                    href="question-management.html"><span class="material-symbols-outlined"
+                        data-icon="settings">settings</span> <span
+                        class="font-label-md text-label-md">Settings</span></a></li>
+        </ul>
+        <div class="mt-auto border-t border-outline-variant pt-md space-y-sm">
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                href="#"><span class="material-symbols-outlined" data-icon="help_outline">help_outline</span> <span
+                    class="font-label-md text-label-md">Help Center</span></a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors rounded-lg"
+                href="login.html"><span class="material-symbols-outlined" data-icon="logout">logout</span> <span
+                    class="font-label-md text-label-md">Logout</span></a>
+        </div>
+    </nav>
+
+    <main class="flex-1 md:ml-[280px] overflow-y-auto p-md md:p-lg bg-background">
+        <div class="max-w-container-max mx-auto space-y-xl">
+
+            <header class="space-y-sm">
+                <nav aria-label="Breadcrumb"
+                    class="text-on-surface-variant font-label-md text-label-md flex items-center gap-xs">
+                    <a class="hover:text-secondary transition-colors" href="student-dashboard.html">Home</a>
+                    <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                    <a class="hover:text-secondary transition-colors" href="#">Unit 1</a>
+                    <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                    <span class="text-primary font-bold">Lesson 1</span>
+                </nav>
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-md border-b border-outline-variant pb-md">
+                    <div>
+                        <span class="text-secondary font-label-md text-label-md uppercase tracking-wider">Unit 1:
+                            Fundamentals</span>
+                        <h2
+                            class="font-headline-xl text-headline-lg-mobile md:text-headline-xl font-bold text-primary mt-xs">
+                            Numbers 1-10</h2>
+                    </div>
+                </div>
+            </header>
+
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-md">
+                <div class="bg-surface-container-lowest rounded-xl p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)]">
+                    <h3 class="font-headline-md text-headline-md font-bold text-primary mb-md">Explicación</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface mb-sm">
+                        En esta lección, aprenderemos los números básicos en inglés del 1 al 10. Estos son fundamentales
+                        para contar, decir tu edad, y expresar cantidades.
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Presta especial atención a la pronunciación del número 3 ("three"), colocando la lengua entre
+                        los dientes.
+                    </p>
+                </div>
+                <div
+                    class="bg-surface-container-lowest rounded-xl p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-outline-variant">
+                    <h3 class="font-headline-md text-headline-md font-bold text-primary mb-md">Vocabulary List</h3>
+                    <ul class="grid grid-cols-2 gap-x-md gap-y-sm font-body-lg text-body-lg">
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">1</span> One</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">6</span> Six</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">2</span> Two</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">7</span> Seven</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">3</span> Three</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">8</span> Eight</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">4</span> Four</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">9</span> Nine</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">5</span> Five</li>
+                        <li class="flex items-center gap-sm"><span
+                                class="text-secondary font-bold w-6 text-right">10</span> Ten</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="font-headline-md text-headline-md font-bold text-primary mb-md">Learn</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+
+                    <div
+                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(18,48,74,0.05)] hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] hover:border-secondary border border-transparent transition-all group flex flex-col">
+                        <div class="h-48 w-full bg-surface-container-low overflow-hidden relative">
+                            <img alt="Numbers visual"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A brightly lit, minimalist flat-lay photo of colorful wooden counting blocks showing numbers 1 through 10 arranged neatly on a clean white desk. Soft, warm natural lighting, professional educational aesthetic."
+                                src="assets/img/numbers-blocks.webp" />
+                        </div>
+                        <div class="p-md flex-1 flex flex-col justify-center text-center">
+                            <span class="material-symbols-outlined text-secondary text-3xl mb-xs">image</span>
+                            <span class="font-label-md text-label-md text-on-surface">Visual Guide</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] hover:border-secondary border border-transparent transition-all cursor-pointer flex flex-col items-center justify-center text-center gap-md">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                            <span class="material-symbols-outlined text-3xl" data-icon="volume_up">volume_up</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline-md text-headline-md text-primary">Listen &amp; Repeat</h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Hear native pronunciation</p>
+                        </div>
+                        <div
+                            class="w-full h-8 bg-surface-container-low rounded-full mt-auto overflow-hidden relative flex items-center justify-center">
+
+                            <div class="flex gap-[2px] items-center justify-center h-full w-3/4 opacity-50">
+                                <div class="w-1 bg-secondary h-2 rounded-full"></div>
+                                <div class="w-1 bg-secondary h-4 rounded-full"></div>
+                                <div class="w-1 bg-secondary h-6 rounded-full"></div>
+                                <div class="w-1 bg-secondary h-3 rounded-full"></div>
+                                <div class="w-1 bg-secondary h-5 rounded-full"></div>
+                                <div class="w-1 bg-secondary h-2 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(18,48,74,0.05)] hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] hover:border-secondary border border-transparent transition-all group relative cursor-pointer flex flex-col">
+                        <div class="h-full w-full bg-primary relative overflow-hidden">
+                            <img alt="Video thumbnail"
+                                class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500"
+                                data-alt="A still frame from an educational video showing a friendly teacher in a modern, bright classroom pointing to a whiteboard with large numbers. High quality, soft lighting, inviting mood."
+                                src="assets/img/video-thumbnail.webp" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-secondary text-3xl ml-1"
+                                        data-icon="play_arrow">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full p-md bg-gradient-to-t from-primary/90 to-transparent">
+                            <span class="font-label-md text-label-md text-on-primary">Watch Lesson</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-surface-container-low rounded-xl p-lg border border-outline-variant">
+                <h3 class="font-headline-md text-headline-md font-bold text-primary mb-lg">Practice</h3>
+                <form class="space-y-xl max-w-2xl" id="practice-form">
+
+                    <div class="space-y-sm">
+                        <p class="font-body-lg text-body-lg font-bold text-on-surface">1. How do you spell the number 5?
+                        </p>
+                        <div class="flex flex-col gap-sm pl-sm">
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q1"
+                                    type="radio" value="a" />
+                                <span class="font-body-md text-body-md">Fiv</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q1"
+                                    type="radio" value="b" />
+                                <span class="font-body-md text-body-md">Five</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q1"
+                                    type="radio" value="c" />
+                                <span class="font-body-md text-body-md">Fibe</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-sm">
+                        <p class="font-body-lg text-body-lg font-bold text-on-surface">2. What number comes after seven?
+                        </p>
+                        <div class="flex flex-col gap-sm pl-sm">
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q2"
+                                    type="radio" value="a" />
+                                <span class="font-body-md text-body-md">Eight</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q2"
+                                    type="radio" value="b" />
+                                <span class="font-body-md text-body-md">Six</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q2"
+                                    type="radio" value="c" />
+                                <span class="font-body-md text-body-md">Nine</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-sm">
+                        <p class="font-body-lg text-body-lg font-bold text-on-surface">3. Choose the correct translation
+                            for "Ocho":</p>
+                        <div class="flex flex-col gap-sm pl-sm">
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q3"
+                                    type="radio" value="a" />
+                                <span class="font-body-md text-body-md">Four</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q3"
+                                    type="radio" value="b" />
+                                <span class="font-body-md text-body-md">Ten</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-sm cursor-pointer p-sm rounded hover:bg-surface-container-highest transition-colors">
+                                <input class="text-secondary focus:ring-secondary h-5 w-5 border-outline" name="q3"
+                                    type="radio" value="c" />
+                                <span class="font-body-md text-body-md">Eight</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pt-md border-t border-outline-variant flex items-center justify-between">
+                        <button
+                            class="bg-secondary text-on-secondary font-label-md text-label-md font-bold py-sm px-xl rounded-full shadow-[0px_4px_20px_rgba(18,48,74,0.05)] hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] transition-all"
+                            onclick="checkAnswers()" type="button">Enviar respuestas</button>
+                        <div class="hidden items-center gap-sm px-md py-sm rounded-lg font-label-md text-label-md transition-opacity duration-300 opacity-0"
+                            id="feedback-toast">
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+
+
+
+</body>
+
 </html>

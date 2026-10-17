@@ -2,263 +2,283 @@
 <html class="light" lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LinguaStep A1 - Aprende inglés desde cero</title>
-
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="assets/js/tailwind.config.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinguaStep A1 - Aprende inglés desde cero</title>
 
 
-  <link href="assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+    <script src="assets/js/tailwind.config.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
-  <header class="g-surface shadow-sm sticky top-0 z-50 w-full">
-    <nav class="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
-      <div class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</div>
-      <div class="hidden md:flex gap-lg items-center">
-        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
-          href="#">Features</a>
-        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
-          href="#">Methodology</a>
-        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
-          href="#">Pricing</a>
-        <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
-          href="#">About</a>
-      </div>
-      <div class="flex items-center gap-md">
-        <a href="login.html"
-          class="font-label-md text-label-md text-primary font-bold hover:text-secondary transition-colors inline-flex items-center">Sign
-          In</a>
-        <a href="login.html"
-          class="bg-secondary text-on-secondary font-label-md text-label-md px-md py-sm rounded-lg font-bold hover:bg-secondary-fixed-dim transition-colors scale-95 duration-150 inline-flex items-center">Get
-          Started</a>
-      </div>
-    </nav>
-  </header>
 
-  <main class="flex-grow">
-    <!-- Hero Section -->
-    <section class="bg-primary text-on-primary py-xl px-md md:px-lg overflow-hidden relative">
-      <!-- Subtle background accent -->
-      <div
-        class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-primary to-primary">
-      </div>
-      <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center relative z-10">
-        <div class="space-y-lg">
-          <h1
-            class="font-headline-xl text-headline-xl md:text-[56px] md:leading-[64px] font-bold text-surface-container-lowest tracking-tight">
-            Aprende inglés<br />desde cero
-          </h1>
-          <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-md">
-            Da el primer paso hacia la fluidez con lecciones estructuradas, accesibles y diseñadas para principiantes
-            absolutos. Tu viaje comienza aquí.
-          </p>
-          <div class="pt-sm">
-            <a href="student-dashboard.html"
-              class="bg-secondary text-on-secondary font-label-md text-label-md px-lg py-md rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 inline-flex items-center justify-center">Comenzar
-              curso</a>
-          </div>
-        </div>
-        <div class="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
-          <img class="absolute inset-0 w-full h-full object-cover"
-            data-alt="A warm, inviting photograph of a smiling young adult student sitting in a well-lit, minimalist cafe, wearing headphones and looking at a modern tablet screen. Soft sunlight filters through a window. The color palette features deep navy and bright turquoise accents, reflecting a professional yet encouraging educational environment. High resolution, shallow depth of field."
-            src="assets/img/login-hero.webp" />
-        </div>
-      </div>
-    </section>
-    <!-- Course Units (Bento Grid) -->
-    <section class="py-xl px-md md:px-lg max-w-container-max mx-auto">
-      <div class="text-center mb-xl">
-        <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Explora el Programa</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Bloques de conocimiento diseñados
-          para reducir la carga cognitiva y asegurar el progreso continuo.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
-        <!-- Card 1 -->
-        <div
-          class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 md:col-span-2 relative overflow-hidden flex flex-col justify-between h-[280px]">
-          <div class="z-10">
-            <span
-              class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container mb-md">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">waving_hand</span>
-            </span>
-            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Greetings and Introductions</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Aprende a saludar, presentarte y tener
-              tus primeras conversaciones básicas con confianza.</p>
-          </div>
-          <div class="absolute right-0 bottom-0 w-64 h-64 opacity-5 pointer-events-none">
-            <span class="material-symbols-outlined text-[200px]">chat</span>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div
-          class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 flex flex-col justify-between h-[280px]">
-          <div>
-            <span
-              class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-fixed text-on-primary-fixed mb-md">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
-            </span>
-            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Classroom Objects</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Números, colores y vocabulario esencial del
-              entorno.</p>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div
-          class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 flex flex-col justify-between h-[280px]">
-          <div>
-            <span
-              class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed mb-md">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
-            </span>
-            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Family &amp; Info</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Describe a tu familia y comparte información
-              personal clave.</p>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div
-          class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 md:col-span-2 flex items-center h-[280px] relative overflow-hidden">
-          <div class="w-1/2 z-10 pr-lg">
-            <span
-              class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface-variant text-on-surface-variant mb-md">
-              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">routine</span>
-            </span>
-            <h3 class="font-headline-md text-headline-md text-primary mb-xs">Daily Routines</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">Habla sobre tu día a día y expresa hábitos en
-              presente simple.</p>
-          </div>
-          <div class="absolute inset-y-0 right-0 w-1/2">
-            <img class="w-full h-full object-cover"
-              data-alt="A bright, minimalist flat-lay photograph showing a neat desk with a steaming cup of coffee, an open notebook with a turquoise pen, and a sleek alarm clock. The lighting is soft morning daylight, conveying a fresh start and daily routine. Colors are warm white, subtle greys, and turquoise accents."
-              src="assets/img/daily-routine.webp" />
-            <!-- Gradient overlay to fade image into card background -->
-            <div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest to-transparent"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Interactive Methodology Preview -->
-    <section class="bg-surface-container-low py-xl px-md md:px-lg">
-      <div class="max-w-container-max mx-auto">
-        <div class="text-center mb-xl">
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Aprende con todos los sentidos</h2>
-          <p class="font-body-md text-body-md text-on-surface-variant">Visual, auditivo e interactivo.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
-          <!-- Audio -->
-          <div
-            class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant flex items-center gap-md">
-            <div class="w-16 h-16 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[32px]">volume_up</span>
-            </div>
-            <div>
-              <h4 class="font-label-md text-label-md text-primary">Audio Nativo</h4>
-              <p class="font-body-md text-body-md text-sm text-on-surface-variant">Escucha la pronunciación correcta.
-              </p>
-            </div>
-          </div>
-          <!-- Video -->
-          <div
-            class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant flex items-center gap-md">
-            <div class="w-16 h-16 rounded-lg bg-secondary text-on-secondary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[32px]">play_circle</span>
-            </div>
-            <div>
-              <h4 class="font-label-md text-label-md text-primary">Lecciones en Video</h4>
-              <p class="font-body-md text-body-md text-sm text-on-surface-variant">Contexto visual para cada concepto.
-              </p>
-            </div>
-          </div>
-          <!-- Interactive -->
-          <div
-            class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant flex items-center gap-md">
-            <div class="w-16 h-16 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-[32px]">edit_note</span>
-            </div>
-            <div>
-              <h4 class="font-label-md text-label-md text-primary">Ejercicios Interactivos</h4>
-              <p class="font-body-md text-body-md text-sm text-on-surface-variant">Practica lo que aprendes al instante.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Section -->
-    <section class="py-xl px-md md:px-lg max-w-container-max mx-auto">
-      <div
-        class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] overflow-hidden flex flex-col md:flex-row border border-surface-container">
-        <div class="bg-primary text-on-primary p-lg md:w-2/5 flex flex-col justify-center">
-          <h2 class="font-headline-lg text-headline-lg mb-md">¿Dudas? Contáctanos</h2>
-          <p class="font-body-md text-body-md text-primary-fixed-dim mb-lg">Estamos aquí para ayudarte a dar tu primer
-            paso. Escríbenos y nuestro equipo te responderá en breve.</p>
-          <div class="space-y-sm">
-            <div class="flex items-center gap-sm text-primary-fixed">
-              <span class="material-symbols-outlined text-sm">mail</span>
-              <span class="font-body-md text-body-md">soporte@linguastep.com</span>
-            </div>
-          </div>
-        </div>
-        <div class="p-lg md:w-3/5">
-          <form class="space-y-md">
-            <div>
-              <label class="block font-label-md text-label-md text-on-surface mb-xs">Nombre</label>
-              <input
-                class="w-full bg-surface-bright border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface input-tactile transition-colors"
-                placeholder="Tu nombre" type="text" />
-            </div>
-            <div>
-              <label class="block font-label-md text-label-md text-on-surface mb-xs">Correo Electrónico</label>
-              <input
-                class="w-full bg-surface-bright border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface input-tactile transition-colors"
-                placeholder="tu@correo.com" type="email" />
-            </div>
-            <div>
-              <label class="block font-label-md text-label-md text-on-surface mb-xs">Mensaje</label>
-              <textarea
-                class="w-full bg-surface-bright border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface input-tactile transition-colors resize-none"
-                placeholder="¿En qué podemos ayudarte?" rows="4"></textarea>
-            </div>
-            <button
-              class="bg-primary text-on-primary font-label-md text-label-md px-lg py-md rounded-lg font-bold hover:bg-primary-container transition-colors w-full md:w-auto"
-              type="button">
-              Enviar Mensaje
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="bg-primary w-full mt-auto">
-    <div
-      class="w-full py-xl px-lg flex flex-col md:flex-row justify-between items-center gap-md max-w-container-max mx-auto">
-      <div class="font-headline-md text-headline-md font-bold text-secondary">
-        LinguaStep A1
-      </div>
-      <div class="flex flex-wrap justify-center gap-md">
-        <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
-          href="#">Privacy Policy</a>
-        <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
-          href="#">Terms of Service</a>
-        <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
-          href="#">Cookies</a>
-        <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
-          href="#">Support</a>
-      </div>
-      <div class="text-on-primary-container font-body-md text-body-md text-sm text-center md:text-right">
-        © 2024 LinguaStep A1. Bridging the gap to fluency.
-      </div>
-    </div>
-  </footer>
+    <header class="bg-surface shadow-sm sticky top-0 z-50 w-full">
+        <nav class="flex justify-between items-center w-full px-lg py-md max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-primary">
+                LinguaStep A1
+            </div>
+            <div class="hidden md:flex gap-lg items-center">
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">Features</a>
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">Methodology</a>
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">Pricing</a>
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">About</a>
+            </div>
+            <div class="flex items-center gap-md">
+                <a href="login.html"
+                    class="font-label-md text-label-md text-primary font-bold hover:text-secondary transition-colors inline-flex items-center">Sign
+                    In</a>
+                <a href="login.html"
+                    class="bg-secondary text-on-secondary font-label-md text-label-md px-md py-sm rounded-lg font-bold hover:bg-secondary-fixed-dim transition-colors scale-95 duration-150 inline-flex items-center">Get
+                    Started</a>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-grow">
+
+        <section class="bg-primary text-on-primary py-xl px-md md:px-lg overflow-hidden relative">
+
+            <div
+                class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-primary to-primary">
+            </div>
+            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center relative z-10">
+                <div class="space-y-lg">
+                    <h1
+                        class="font-headline-xl text-headline-xl md:text-[56px] md:leading-[64px] font-bold text-surface-container-lowest tracking-tight">
+                        Aprende inglés<br />desde cero
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-md">
+                        Da el primer paso hacia la fluidez con lecciones estructuradas, accesibles y diseñadas para
+                        principiantes absolutos. Tu viaje comienza aquí.
+                    </p>
+                    <div class="pt-sm">
+                        <a href="student-dashboard.html"
+                            class="bg-secondary text-on-secondary font-label-md text-label-md px-lg py-md rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 inline-flex items-center justify-center">Comenzar
+                            curso</a>
+                    </div>
+                </div>
+                <div class="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover"
+                        data-alt="A warm, inviting photograph of a smiling young adult student sitting in a well-lit, minimalist cafe, wearing headphones and looking at a modern tablet screen. Soft sunlight filters through a window. The color palette features deep navy and bright turquoise accents, reflecting a professional yet encouraging educational environment. High resolution, shallow depth of field."
+                        src="assets/img/login-hero.webp" />
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl px-md md:px-lg max-w-container-max mx-auto">
+            <div class="text-center mb-xl">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Explora el Programa</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Bloques de conocimiento
+                    diseñados para reducir la carga cognitiva y asegurar el progreso continuo.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+
+                <div
+                    class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 md:col-span-2 relative overflow-hidden flex flex-col justify-between h-[280px]">
+                    <div class="z-10">
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container mb-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">waving_hand</span>
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-xs">Greetings and Introductions
+                        </h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Aprende a saludar,
+                            presentarte y tener tus primeras conversaciones básicas con confianza.</p>
+                    </div>
+                    <div class="absolute right-0 bottom-0 w-64 h-64 opacity-5 pointer-events-none">
+                        <span class="material-symbols-outlined text-[200px]">chat</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 flex flex-col justify-between h-[280px]">
+                    <div>
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-fixed text-on-primary-fixed mb-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">school</span>
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-xs">Classroom Objects</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Números, colores y vocabulario
+                            esencial del entorno.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 flex flex-col justify-between h-[280px]">
+                    <div>
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed mb-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-xs">Family &amp; Info</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Describe a tu familia y comparte
+                            información personal clave.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-surface-container-lowest rounded-[16px] p-lg tactile-card border border-surface-container border-transparent col-span-1 md:col-span-2 flex items-center h-[280px] relative overflow-hidden">
+                    <div class="w-1/2 z-10 pr-lg">
+                        <span
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface-variant text-on-surface-variant mb-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">routine</span>
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-xs">Daily Routines</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Habla sobre tu día a día y expresa
+                            hábitos en presente simple.</p>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 w-1/2">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A bright, minimalist flat-lay photograph showing a neat desk with a steaming cup of coffee, an open notebook with a turquoise pen, and a sleek alarm clock. The lighting is soft morning daylight, conveying a fresh start and daily routine. Colors are warm white, subtle greys, and turquoise accents."
+                            src="assets/img/daily-routine.webp" />
+
+                        <div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest to-transparent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-surface-container-low py-xl px-md md:px-lg">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-xl">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Aprende con todos los sentidos</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Visual, auditivo e interactivo.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant flex items-center gap-md">
+                        <div
+                            class="w-16 h-16 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-[32px]">volume_up</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-md text-label-md text-primary">Audio Nativo</h4>
+                            <p class="font-body-md text-body-md text-sm text-on-surface-variant">Escucha la
+                                pronunciación correcta.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant flex items-center gap-md">
+                        <div
+                            class="w-16 h-16 rounded-lg bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-[32px]">play_circle</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-md text-label-md text-primary">Lecciones en Video</h4>
+                            <p class="font-body-md text-body-md text-sm text-on-surface-variant">Contexto visual para
+                                cada concepto.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant flex items-center gap-md">
+                        <div
+                            class="w-16 h-16 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-[32px]">edit_note</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-md text-label-md text-primary">Ejercicios Interactivos</h4>
+                            <p class="font-body-md text-body-md text-sm text-on-surface-variant">Practica lo que
+                                aprendes al instante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl px-md md:px-lg max-w-container-max mx-auto">
+            <div
+                class="bg-surface-container-lowest rounded-2xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] overflow-hidden flex flex-col md:flex-row border border-surface-container">
+                <div class="bg-primary text-on-primary p-lg md:w-2/5 flex flex-col justify-center">
+                    <h2 class="font-headline-lg text-headline-lg mb-md">¿Dudas? Contáctanos</h2>
+                    <p class="font-body-md text-body-md text-primary-fixed-dim mb-lg">Estamos aquí para ayudarte a dar
+                        tu primer paso. Escríbenos y nuestro equipo te responderá en breve.</p>
+                    <div class="space-y-sm">
+                        <div class="flex items-center gap-sm text-primary-fixed">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                            <span class="font-body-md text-body-md">soporte@linguastep.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-lg md:w-3/5">
+                    <form class="space-y-md">
+                        <div>
+                            <label class="block font-label-md text-label-md text-on-surface mb-xs">Nombre</label>
+                            <input
+                                class="w-full bg-surface-bright border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface input-tactile transition-colors"
+                                placeholder="Tu nombre" type="text" />
+                        </div>
+                        <div>
+                            <label class="block font-label-md text-label-md text-on-surface mb-xs">Correo
+                                Electrónico</label>
+                            <input
+                                class="w-full bg-surface-bright border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface input-tactile transition-colors"
+                                placeholder="tu@correo.com" type="email" />
+                        </div>
+                        <div>
+                            <label class="block font-label-md text-label-md text-on-surface mb-xs">Mensaje</label>
+                            <textarea
+                                class="w-full bg-surface-bright border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface input-tactile transition-colors resize-none"
+                                placeholder="¿En qué podemos ayudarte?" rows="4"></textarea>
+                        </div>
+                        <button
+                            class="bg-primary text-on-primary font-label-md text-label-md px-lg py-md rounded-lg font-bold hover:bg-primary-container transition-colors w-full md:w-auto"
+                            type="button">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary w-full mt-auto">
+        <div
+            class="w-full py-xl px-lg flex flex-col md:flex-row justify-between items-center gap-md max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-secondary">
+                LinguaStep A1
+            </div>
+            <div class="flex flex-wrap justify-center gap-md">
+                <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
+                    href="#">Cookies</a>
+                <a class="text-on-primary-container font-body-md text-body-md hover:text-secondary-fixed transition-colors"
+                    href="#">Support</a>
+            </div>
+            <div class="text-on-primary-container font-body-md text-body-md text-sm text-center md:text-right">
+                © 2024 LinguaStep A1. Bridging the gap to fluency.
+            </div>
+        </div>
+    </footer>
+
+
+
 </body>
 
 </html>

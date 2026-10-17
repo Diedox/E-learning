@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinguaStep A1 - Student Dashboard</title>
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+    <script src="assets/js/tailwind.config.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex text-body-md">
+
+
+    <nav
+        class="hidden md:flex flex-col h-full w-[280px] p-md space-y-md bg-surface-container-low border-r border-outline-variant fixed left-0 top-0">
+        <div class="flex items-center gap-sm mb-lg">
+            <img alt="Student Profile Picture" class="w-12 h-12 rounded-full object-cover"
+                data-alt="A small, professional portrait of a confident student, shot with soft, flattering light against a clean white background. This portrait is intended for a user avatar in a modern web application, ensuring a friendly and approachable mood."
+                src="assets/img/avatar-student-1.webp" />
+            <div>
+                <h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
+                <p class="font-label-md text-label-md text-on-surface-variant">Beginner Level</p>
+            </div>
+        </div>
+        <button onclick="window.location.href='lesson.html'"
+            class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-secondary-fixed transition-colors font-bold mb-md shadow-sm">
+            Start Daily Lesson
+        </button>
+        <div class="flex-1 space-y-sm mt-md">
+
+            <a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold translate-x-1 transition-transform duration-200"
+                href="student-dashboard.html">
+                <span class="material-symbols-outlined" data-weight="fill"
+                    style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                <span class="font-label-md text-label-md">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg"
+                href="lesson.html">
+                <span class="material-symbols-outlined">auto_stories</span>
+                <span class="font-label-md text-label-md">My Lessons</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg"
+                href="quiz-results.html">
+                <span class="material-symbols-outlined">quiz</span>
+                <span class="font-label-md text-label-md">Practice</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg"
+                href="#">
+                <span class="material-symbols-outlined">menu_book</span>
+                <span class="font-label-md text-label-md">Dictionary</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg"
+                href="question-management.html">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="font-label-md text-label-md">Settings</span>
+            </a>
+        </div>
+        <div class="mt-auto space-y-sm pt-md border-t border-outline-variant">
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg"
+                href="#">
+                <span class="material-symbols-outlined">help_outline</span>
+                <span class="font-label-md text-label-md">Help Center</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md rounded-lg"
+                href="login.html">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="font-label-md text-label-md">Logout</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-1 md:ml-[280px] p-lg w-full max-w-container-max mx-auto min-h-screen">
+
+        <div class="md:hidden flex justify-between items-center mb-lg">
+            <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">LinguaStep A1</h1>
+            <img alt="Student Profile Picture" class="w-10 h-10 rounded-full object-cover"
+                data-alt="A small, professional portrait of a confident student, shot with soft, flattering light against a clean white background. This portrait is intended for a user avatar in a modern web application, ensuring a friendly and approachable mood."
+                src="assets/img/avatar-student-2.webp" />
+        </div>
+
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-xl gap-md">
+            <div>
+                <h2 class="font-headline-xl text-headline-xl text-primary mb-xs">Hello, Alejandro</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Ready to continue your English journey?</p>
+            </div>
+            <button
+                class="bg-secondary text-on-secondary font-label-md text-label-md px-xl py-sm rounded-lg hover:bg-secondary-fixed shadow-[0px_4px_20px_rgba(18,48,74,0.05)] transition-all hover:scale-[1.02] active:scale-95 font-bold">
+                Continuar aprendiendo
+            </button>
+        </header>
+
+        <section
+            class="bg-surface-container-lowest rounded-xl p-lg shadow-[0px_4px_20px_rgba(18,48,74,0.05)] mb-xl border border-outline-variant/30">
+            <div class="flex justify-between items-end mb-sm">
+                <div>
+                    <h3 class="font-headline-md text-headline-md text-primary">Course Progress</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">A1 Beginner Track</p>
+                </div>
+                <span class="font-headline-lg text-headline-lg text-secondary">45%</span>
+            </div>
+
+            <div class="w-full bg-surface-container-highest rounded-full h-4 overflow-hidden relative shadow-inner">
+                <div class="bg-secondary h-4 rounded-full transition-all duration-1000 ease-out absolute left-0 top-0"
+                    style="width: 45%;"></div>
+            </div>
+            <p class="font-label-md text-label-md text-on-surface-variant mt-sm text-right">Keep it up! 55% remaining.
+            </p>
+        </section>
+
+        <section class="mb-xl">
+            <h3 class="font-headline-md text-headline-md text-primary mb-md">Your Units</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+
+                <article
+                    class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-outline-variant/30 relative overflow-hidden group hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] hover:border-secondary transition-all">
+                    <div class="flex justify-between items-start mb-md">
+                        <div class="bg-secondary-container p-sm rounded-lg text-on-secondary-container">
+                            <span class="material-symbols-outlined">waving_hand</span>
+                        </div>
+
+                        <div class="w-10 h-10 rounded-full border-4 border-secondary flex items-center justify-center">
+                            <span class="material-symbols-outlined text-secondary text-[16px]" data-weight="fill"
+                                style="font-variation-settings: 'FILL' 1;">check</span>
+                        </div>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-xs">Greetings</h4>
+                    <p class="font-label-md text-label-md text-secondary mb-md">Completed</p>
+                    <button
+                        class="w-full border-2 border-secondary text-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors font-bold">Review</button>
+                </article>
+
+                <article
+                    class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-secondary relative overflow-hidden group hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] transition-all">
+
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-secondary/10 rounded-bl-full -z-10"></div>
+                    <div class="flex justify-between items-start mb-md">
+                        <div class="bg-primary-container p-sm rounded-lg text-on-primary-container">
+                            <span class="material-symbols-outlined">123</span>
+                        </div>
+
+                        <div
+                            class="w-10 h-10 rounded-full border-4 border-surface-container-highest relative flex items-center justify-center">
+                            <div
+                                class="absolute inset-0 rounded-full border-4 border-secondary border-t-transparent transform rotate-45">
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-xs">Numbers</h4>
+                    <p class="font-label-md text-label-md text-tertiary-fixed-dim mb-md">In Progress</p>
+                    <button onclick="window.location.href='lesson.html'"
+                        class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-secondary-fixed transition-colors font-bold">Continue</button>
+                </article>
+
+                <article
+                    class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-outline-variant/30 relative overflow-hidden group hover:shadow-[0px_8px_30px_rgba(18,48,74,0.1)] hover:border-secondary transition-all opacity-80 hover:opacity-100">
+                    <div class="flex justify-between items-start mb-md">
+                        <div class="bg-surface-container-high p-sm rounded-lg text-on-surface-variant">
+                            <span class="material-symbols-outlined">family_restroom</span>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-full border-4 border-surface-container-highest flex items-center justify-center">
+                        </div>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-xs">Family</h4>
+                    <p class="font-label-md text-label-md text-on-surface-variant mb-md">Available</p>
+                    <button
+                        class="w-full border-2 border-outline-variant text-on-surface-variant font-label-md text-label-md py-sm rounded-lg hover:border-secondary hover:text-secondary transition-colors font-bold">Start</button>
+                </article>
+
+                <article
+                    class="bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-outline-variant/30 relative overflow-hidden opacity-60">
+                    <div class="flex justify-between items-start mb-md">
+                        <div class="bg-surface-container-high p-sm rounded-lg text-on-surface-variant">
+                            <span class="material-symbols-outlined">schedule</span>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-full border-4 border-surface-container-highest flex items-center justify-center">
+                            <span class="material-symbols-outlined text-outline-variant text-[16px]">lock</span>
+                        </div>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-xs">Routines</h4>
+                    <p class="font-label-md text-label-md text-outline mb-md">Unlock at 60%</p>
+                    <button
+                        class="w-full bg-surface-container-high text-outline font-label-md text-label-md py-sm rounded-lg cursor-not-allowed font-bold"
+                        disabled="">Locked</button>
+                </article>
+            </div>
+        </section>
+
+        <section
+            class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-outline-variant/30 overflow-hidden mb-xl">
+            <div class="p-lg border-b border-outline-variant/30 flex justify-between items-center">
+                <h3 class="font-headline-md text-headline-md text-primary">Recent Activity</h3>
+                <button
+                    class="text-secondary font-label-md text-label-md hover:underline font-bold flex items-center gap-xs">
+                    View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr
+                            class="bg-surface-container text-on-surface-variant font-label-md text-label-md uppercase tracking-wider border-b border-outline-variant/30">
+                            <th class="p-md font-semibold">Lección</th>
+                            <th class="p-md font-semibold">Puntaje</th>
+                            <th class="p-md font-semibold">Estado</th>
+                            <th class="p-md font-semibold">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-body-md text-body-md text-on-surface">
+                        <tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+                            <td class="p-md font-medium text-primary">Numbers 1-10</td>
+                            <td class="p-md text-on-surface-variant">85/100</td>
+                            <td class="p-md">
+                                <span
+                                    class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-[12px]">
+                                    <span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> En Progreso
+                                </span>
+                            </td>
+                            <td class="p-md text-on-surface-variant">Hoy, 10:30 AM</td>
+                        </tr>
+                        <tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+                            <td class="p-md font-medium text-primary">Basic Greetings</td>
+                            <td class="p-md text-on-surface-variant">100/100</td>
+                            <td class="p-md">
+                                <span
+                                    class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-[12px]">
+                                    <span class="w-2 h-2 rounded-full bg-secondary"></span> Completado
+                                </span>
+                            </td>
+                            <td class="p-md text-on-surface-variant">Ayer, 14:15 PM</td>
+                        </tr>
+                        <tr class="border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+                            <td class="p-md font-medium text-primary">Alphabet Intro</td>
+                            <td class="p-md text-on-surface-variant">95/100</td>
+                            <td class="p-md">
+                                <span
+                                    class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-[12px]">
+                                    <span class="w-2 h-2 rounded-full bg-secondary"></span> Completado
+                                </span>
+                            </td>
+                            <td class="p-md text-on-surface-variant">12 Oct, 09:00 AM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <nav
+        class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-low border-t border-outline-variant flex justify-around p-sm shadow-[0px_-4px_20px_rgba(18,48,74,0.05)] z-50">
+        <a class="flex flex-col items-center gap-xs text-secondary-container-on bg-secondary-container rounded-lg p-sm min-w-[64px]"
+            href="student-dashboard.html">
+            <span class="material-symbols-outlined" data-weight="fill"
+                style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span class="text-[10px] font-label-md font-bold">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-xs text-on-surface-variant p-sm min-w-[64px]" href="lesson.html">
+            <span class="material-symbols-outlined">auto_stories</span>
+            <span class="text-[10px] font-label-md">Lessons</span>
+        </a>
+        <a class="flex flex-col items-center gap-xs text-on-surface-variant p-sm min-w-[64px]" href="quiz-results.html">
+            <span class="material-symbols-outlined">quiz</span>
+            <span class="text-[10px] font-label-md">Practice</span>
+        </a>
+        <a class="flex flex-col items-center gap-xs text-on-surface-variant p-sm min-w-[64px]"
+            href="question-management.html">
+            <span class="material-symbols-outlined">settings</span>
+            <span class="text-[10px] font-label-md">Settings</span>
+        </a>
+    </nav>
+
+
+
+</body>
+
+</html>

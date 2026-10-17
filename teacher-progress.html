@@ -1,200 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teacher Progress Table - LinguaStep A1</title>
 
-    <!-- Google Fonts & Material Symbols -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
 
-    <!-- Tailwind CSS (CDN Engine) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <!-- Shared Tailwind Configuration (Design Tokens) -->
+
     <script src="assets/js/tailwind.config.js"></script>
 
-    <!-- Shared Custom Stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css"/>
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<!-- REACT COMPONENT HINT: <TeacherProgress /> -->
+
 <body class="bg-surface text-on-surface font-body-md min-h-screen flex">
 
-<!-- SideNavBar (Desktop) -->
-<nav class="hidden md:flex flex-col h-full w-[280px] p-md space-y-md bg-surface-container-low border-r border-outline-variant fixed left-0 top-0 z-50">
-<!-- Header -->
-<div class="flex items-center gap-sm mb-md">
-<img alt="Student Profile Picture" class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a teacher on a warm white background, smiling and approachable, wearing smart casual attire. Lighting is soft and even, highlighting their friendly demeanor. High quality, clear resolution, suitable for a professional educational profile." src="assets/img/teacher-2.webp"/>
-<div>
-<h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
-<p class="font-label-md text-label-md text-on-surface-variant">Beginner Level</p>
-</div>
-</div>
-<!-- Navigation Links -->
-<div class="flex-1 space-y-base">
-<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold translate-x-1 transition-transform duration-200" href="teacher-dashboard.html">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="font-label-md text-label-md">Dashboard</span>
-</a>
-<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="teacher-dashboard.html">
-<span class="material-symbols-outlined">auto_stories</span>
-<span class="font-label-md text-label-md">My Lessons</span>
-</a>
-<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="quiz-results.html">
-<span class="material-symbols-outlined">quiz</span>
-<span class="font-label-md text-label-md">Practice</span>
-</a>
-<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="#">
-<span class="material-symbols-outlined">menu_book</span>
-<span class="font-label-md text-label-md">Dictionary</span>
-</a>
-<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="question-management.html">
-<span class="material-symbols-outlined">settings</span>
-<span class="font-label-md text-label-md">Settings</span>
-</a>
-</div>
-<!-- CTA -->
-<button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-on-secondary-container transition-colors mb-md">
+
+    <nav
+        class="hidden md:flex flex-col h-full w-[280px] p-md space-y-md bg-surface-container-low border-r border-outline-variant fixed left-0 top-0 z-50">
+
+        <div class="flex items-center gap-sm mb-md">
+            <img alt="Student Profile Picture" class="w-12 h-12 rounded-full object-cover"
+                data-alt="A professional headshot of a teacher on a warm white background, smiling and approachable, wearing smart casual attire. Lighting is soft and even, highlighting their friendly demeanor. High quality, clear resolution, suitable for a professional educational profile."
+                src="assets/img/teacher-2.webp" />
+            <div>
+                <h1 class="font-headline-md text-headline-md font-bold text-primary">LinguaStep A1</h1>
+                <p class="font-label-md text-label-md text-on-surface-variant">Beginner Level</p>
+            </div>
+        </div>
+
+        <div class="flex-1 space-y-base">
+            <a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-md py-sm font-bold translate-x-1 transition-transform duration-200"
+                href="teacher-dashboard.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="font-label-md text-label-md">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors"
+                href="teacher-dashboard.html">
+                <span class="material-symbols-outlined">auto_stories</span>
+                <span class="font-label-md text-label-md">My Lessons</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors"
+                href="quiz-results.html">
+                <span class="material-symbols-outlined">quiz</span>
+                <span class="font-label-md text-label-md">Practice</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors"
+                href="#">
+                <span class="material-symbols-outlined">menu_book</span>
+                <span class="font-label-md text-label-md">Dictionary</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors"
+                href="question-management.html">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="font-label-md text-label-md">Settings</span>
+            </a>
+        </div>
+
+        <button
+            class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-sm rounded-lg hover:bg-on-secondary-container transition-colors mb-md">
             Start Daily Lesson
         </button>
-<!-- Footer Links -->
-<div class="mt-auto space-y-base pt-md border-t border-outline-variant">
-<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="#">
-<span class="material-symbols-outlined">help_outline</span>
-<span class="font-label-md text-label-md">Help Center</span>
-</a>
-<a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors" href="login.html">
-<span class="material-symbols-outlined">logout</span>
-<span class="font-label-md text-label-md">Logout</span>
-</a>
-</div>
-</nav>
-<!-- Main Content Area -->
-<main class="flex-1 ml-0 md:ml-[280px] p-lg w-full max-w-container-max mx-auto overflow-x-hidden">
-<header class="mb-xl flex justify-between items-end">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-primary">Student Progress Overview</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Track performance across all A1 level students.</p>
-</div>
-<!-- Filters -->
-<div class="flex gap-md items-center bg-surface-container-lowest p-sm rounded-xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest">
-<div class="flex items-center gap-sm">
-<span class="material-symbols-outlined text-outline">filter_list</span>
-<span class="font-label-md text-label-md text-on-surface-variant">Filters:</span>
-</div>
-<div class="relative group">
-<button class="flex items-center gap-xs px-sm py-xs border border-outline-variant rounded-lg hover:border-secondary transition-colors focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary">
-<span class="font-body-md text-body-md text-on-surface">All Units</span>
-<span class="material-symbols-outlined text-outline text-[20px]">arrow_drop_down</span>
-</button>
-<!-- Simulated Dropdown -->
-<div class="hidden group-hover:block absolute top-full left-0 mt-xs w-48 bg-surface-container-lowest border border-surface-container-highest rounded-lg shadow-lg z-10 py-xs">
-<a class="block px-md py-sm hover:bg-surface-container-low font-body-md text-body-md" href="#">All Units</a>
-<a class="block px-md py-sm hover:bg-surface-container-low font-body-md text-body-md" href="#">Unit 1: Introductions</a>
-<a class="block px-md py-sm hover:bg-surface-container-low font-body-md text-body-md" href="#">Unit 2: Daily Routines</a>
-</div>
-</div>
-<div class="relative group">
-<button class="flex items-center gap-xs px-sm py-xs border border-outline-variant rounded-lg hover:border-secondary transition-colors focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary">
-<span class="font-body-md text-body-md text-on-surface">Status: All</span>
-<span class="material-symbols-outlined text-outline text-[20px]">arrow_drop_down</span>
-</button>
-</div>
-</div>
-</header>
-<!-- Data Table Container -->
-<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest overflow-hidden relative">
-<!-- Table Header -->
-<div class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg bg-surface-container-low border-b border-surface-container-highest items-center">
-<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Estudiante</div>
-<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Lección</div>
-<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Unidad</div>
-<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Puntaje</div>
-<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Estado</div>
-<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">Fecha</div>
-</div>
-<!-- Table Body - Data Rows -->
-<div class="divide-y divide-surface-container-highest">
-<!-- Row 1 -->
-<div class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg items-center hover:bg-surface-container-low transition-colors duration-200">
-<div class="flex items-center gap-sm">
-<img alt="Student Profile" class="w-10 h-10 rounded-full object-cover" data-alt="A portrait of a young male student in a bright, modern learning environment. He is focused and attentive. The lighting is soft and natural, creating a welcoming and studious atmosphere. Professional quality image." src="assets/img/student-male.webp"/>
-<div>
-<p class="font-label-md text-label-md text-primary">Carlos Rodríguez</p>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">carlos.r@example.com</p>
-</div>
-</div>
-<div class="font-body-md text-body-md text-on-surface">Greetings &amp; Farewells</div>
-<div class="font-body-md text-body-md text-on-surface-variant">Unit 1</div>
-<div class="font-label-md text-label-md text-secondary">92%</div>
-<div>
-<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-secondary/10 text-secondary font-label-md text-xs">
-<span class="material-symbols-outlined text-[16px]" data-weight="fill">check_circle</span>
+
+        <div class="mt-auto space-y-base pt-md border-t border-outline-variant">
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors"
+                href="#">
+                <span class="material-symbols-outlined">help_outline</span>
+                <span class="font-label-md text-label-md">Help Center</span>
+            </a>
+            <a class="flex items-center gap-sm text-on-surface-variant px-md py-sm hover:bg-surface-container-high transition-colors"
+                href="login.html">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="font-label-md text-label-md">Logout</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-1 ml-0 md:ml-[280px] p-lg w-full max-w-container-max mx-auto overflow-x-hidden">
+        <header class="mb-xl flex justify-between items-end">
+            <div>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Student Progress Overview</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Track performance across all A1 level
+                    students.</p>
+            </div>
+
+            <div
+                class="flex gap-md items-center bg-surface-container-lowest p-sm rounded-xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest">
+                <div class="flex items-center gap-sm">
+                    <span class="material-symbols-outlined text-outline">filter_list</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant">Filters:</span>
+                </div>
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-xs px-sm py-xs border border-outline-variant rounded-lg hover:border-secondary transition-colors focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary">
+                        <span class="font-body-md text-body-md text-on-surface">All Units</span>
+                        <span class="material-symbols-outlined text-outline text-[20px]">arrow_drop_down</span>
+                    </button>
+
+                    <div
+                        class="hidden group-hover:block absolute top-full left-0 mt-xs w-48 bg-surface-container-lowest border border-surface-container-highest rounded-lg shadow-lg z-10 py-xs">
+                        <a class="block px-md py-sm hover:bg-surface-container-low font-body-md text-body-md"
+                            href="#">All Units</a>
+                        <a class="block px-md py-sm hover:bg-surface-container-low font-body-md text-body-md"
+                            href="#">Unit 1: Introductions</a>
+                        <a class="block px-md py-sm hover:bg-surface-container-low font-body-md text-body-md"
+                            href="#">Unit 2: Daily Routines</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-xs px-sm py-xs border border-outline-variant rounded-lg hover:border-secondary transition-colors focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary">
+                        <span class="font-body-md text-body-md text-on-surface">Status: All</span>
+                        <span class="material-symbols-outlined text-outline text-[20px]">arrow_drop_down</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div
+            class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(18,48,74,0.05)] border border-surface-container-highest overflow-hidden relative">
+
+            <div
+                class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg bg-surface-container-low border-b border-surface-container-highest items-center">
+                <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Estudiante
+                </div>
+                <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Lección</div>
+                <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Unidad</div>
+                <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Puntaje</div>
+                <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Estado</div>
+                <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">
+                    Fecha</div>
+            </div>
+
+            <div class="divide-y divide-surface-container-highest">
+
+                <div
+                    class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg items-center hover:bg-surface-container-low transition-colors duration-200">
+                    <div class="flex items-center gap-sm">
+                        <img alt="Student Profile" class="w-10 h-10 rounded-full object-cover"
+                            data-alt="A portrait of a young male student in a bright, modern learning environment. He is focused and attentive. The lighting is soft and natural, creating a welcoming and studious atmosphere. Professional quality image."
+                            src="assets/img/student-male.webp" />
+                        <div>
+                            <p class="font-label-md text-label-md text-primary">Carlos Rodríguez</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant text-sm">carlos.r@example.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="font-body-md text-body-md text-on-surface">Greetings &amp; Farewells</div>
+                    <div class="font-body-md text-body-md text-on-surface-variant">Unit 1</div>
+                    <div class="font-label-md text-label-md text-secondary">92%</div>
+                    <div>
+                        <span
+                            class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-secondary/10 text-secondary font-label-md text-xs">
+                            <span class="material-symbols-outlined text-[16px]" data-weight="fill">check_circle</span>
                             Completado
                         </span>
-</div>
-<div class="font-body-md text-body-md text-on-surface-variant text-right">Oct 24, 2023</div>
-</div>
-<!-- Row 2 -->
-<div class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg items-center hover:bg-surface-container-low transition-colors duration-200">
-<div class="flex items-center gap-sm">
-<img alt="Student Profile" class="w-10 h-10 rounded-full object-cover" data-alt="A portrait of a female student with glasses, looking thoughtful in a classroom setting. Warm, inviting lighting emphasizing a serious but positive learning mood. Clear, high-resolution photography suitable for educational contexts." src="assets/img/student-female.webp"/>
-<div>
-<p class="font-label-md text-label-md text-primary">Ana Silva</p>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">ana.s@example.com</p>
-</div>
-</div>
-<div class="font-body-md text-body-md text-on-surface">Verb 'To Be'</div>
-<div class="font-body-md text-body-md text-on-surface-variant">Unit 1</div>
-<div class="font-label-md text-label-md text-on-tertiary-container">In Progress</div>
-<div>
-<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-tertiary-fixed-dim/20 text-on-tertiary-container font-label-md text-xs">
-<span class="material-symbols-outlined text-[16px]">pending</span>
+                    </div>
+                    <div class="font-body-md text-body-md text-on-surface-variant text-right">Oct 24, 2023</div>
+                </div>
+
+                <div
+                    class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg items-center hover:bg-surface-container-low transition-colors duration-200">
+                    <div class="flex items-center gap-sm">
+                        <img alt="Student Profile" class="w-10 h-10 rounded-full object-cover"
+                            data-alt="A portrait of a female student with glasses, looking thoughtful in a classroom setting. Warm, inviting lighting emphasizing a serious but positive learning mood. Clear, high-resolution photography suitable for educational contexts."
+                            src="assets/img/student-female.webp" />
+                        <div>
+                            <p class="font-label-md text-label-md text-primary">Ana Silva</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant text-sm">ana.s@example.com</p>
+                        </div>
+                    </div>
+                    <div class="font-body-md text-body-md text-on-surface">Verb 'To Be'</div>
+                    <div class="font-body-md text-body-md text-on-surface-variant">Unit 1</div>
+                    <div class="font-label-md text-label-md text-on-tertiary-container">In Progress</div>
+                    <div>
+                        <span
+                            class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-tertiary-fixed-dim/20 text-on-tertiary-container font-label-md text-xs">
+                            <span class="material-symbols-outlined text-[16px]">pending</span>
                             En Progreso
                         </span>
-</div>
-<div class="font-body-md text-body-md text-on-surface-variant text-right">Oct 25, 2023</div>
-</div>
-<!-- Row 3 -->
-<div class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg items-center hover:bg-surface-container-low transition-colors duration-200">
-<div class="flex items-center gap-sm">
-<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-label-md text-label-md">
+                    </div>
+                    <div class="font-body-md text-body-md text-on-surface-variant text-right">Oct 25, 2023</div>
+                </div>
+
+                <div
+                    class="grid grid-cols-[2fr_1.5fr_1.5fr_1fr_1fr_1.5fr] gap-md p-lg items-center hover:bg-surface-container-low transition-colors duration-200">
+                    <div class="flex items-center gap-sm">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-label-md text-label-md">
                             JD
                         </div>
-<div>
-<p class="font-label-md text-label-md text-primary">Juan David</p>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">juan.d@example.com</p>
-</div>
-</div>
-<div class="font-body-md text-body-md text-on-surface">Numbers 1-20</div>
-<div class="font-body-md text-body-md text-on-surface-variant">Unit 1</div>
-<div class="font-label-md text-label-md text-error">45%</div>
-<div>
-<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-xs">
-<span class="material-symbols-outlined text-[16px]">error</span>
+                        <div>
+                            <p class="font-label-md text-label-md text-primary">Juan David</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant text-sm">juan.d@example.com</p>
+                        </div>
+                    </div>
+                    <div class="font-body-md text-body-md text-on-surface">Numbers 1-20</div>
+                    <div class="font-body-md text-body-md text-on-surface-variant">Unit 1</div>
+                    <div class="font-label-md text-label-md text-error">45%</div>
+                    <div>
+                        <span
+                            class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-xs">
+                            <span class="material-symbols-outlined text-[16px]">error</span>
                             Revisar
                         </span>
-</div>
-<div class="font-body-md text-body-md text-on-surface-variant text-right">Oct 25, 2023</div>
-</div>
-</div>
-<!-- Pagination Footer -->
-<div class="p-md border-t border-surface-container-highest flex justify-between items-center bg-surface-container-lowest">
-<span class="font-body-md text-body-md text-on-surface-variant">Showing 1-3 of 42 results</span>
-<div class="flex gap-sm">
-<button class="p-xs border border-outline-variant rounded-md text-on-surface-variant hover:bg-surface-container-low disabled:opacity-50" disabled="">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<button class="p-xs border border-outline-variant rounded-md text-on-surface hover:bg-surface-container-low">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-</div>
-</main>
+                    </div>
+                    <div class="font-body-md text-body-md text-on-surface-variant text-right">Oct 25, 2023</div>
+                </div>
+            </div>
+
+            <div
+                class="p-md border-t border-surface-container-highest flex justify-between items-center bg-surface-container-lowest">
+                <span class="font-body-md text-body-md text-on-surface-variant">Showing 1-3 of 42 results</span>
+                <div class="flex gap-sm">
+                    <button
+                        class="p-xs border border-outline-variant rounded-md text-on-surface-variant hover:bg-surface-container-low disabled:opacity-50"
+                        disabled="">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button
+                        class="p-xs border border-outline-variant rounded-md text-on-surface hover:bg-surface-container-low">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
-    
+
 </body>
+
 </html>
