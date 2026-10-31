@@ -3,6 +3,8 @@ import PublicLayout from "../layouts/PublicLayout.jsx";
 import StudentLayout from "../layouts/StudentLayout.jsx";
 import TeacherLayout from "../layouts/TeacherLayout.jsx";
 import RoutePlaceholder from "../pages/RoutePlaceholder.jsx";
+import LandingPage from "../pages/public/LandingPage.jsx";
+import LoginPage from "../pages/auth/LoginPage.jsx";
 
 function page(title, description) {
   return <RoutePlaceholder title={title} description={description} />;
@@ -12,9 +14,12 @@ export const router = createBrowserRouter([
   {
     element: <PublicLayout />,
     children: [
-      { path: "/", element: page("LinguaStep A1", "Aprende inglés desde cero.") },
-      { path: "/login", element: page("Iniciar sesión", "Accede o crea tu cuenta.") },
+      { path: "/", element: <LandingPage /> },
     ],
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
   },
   {
     element: <StudentLayout />,
