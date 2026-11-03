@@ -5,6 +5,9 @@ import TeacherLayout from "../layouts/TeacherLayout.jsx";
 import RoutePlaceholder from "../pages/RoutePlaceholder.jsx";
 import LandingPage from "../pages/public/LandingPage.jsx";
 import LoginPage from "../pages/auth/LoginPage.jsx";
+import StudentDashboardPage from "../pages/student/StudentDashboardPage.jsx";
+import LessonPage from "../pages/student/LessonPage.jsx";
+import QuizResultsPage from "../pages/student/QuizResultsPage.jsx";
 
 function page(title, description) {
   return <RoutePlaceholder title={title} description={description} />;
@@ -24,9 +27,9 @@ export const router = createBrowserRouter([
   {
     element: <StudentLayout />,
     children: [
-      { path: "/student/dashboard", element: page("Panel del estudiante", "Tu progreso y tus lecciones.") },
-      { path: "/student/lesson", element: page("Lección", "Contenido y práctica interactiva.") },
-      { path: "/student/results", element: page("Resultados", "Resumen de tu evaluación.") },
+      { path: "/student/dashboard", element: <StudentDashboardPage /> },
+      { path: "/student/lesson", element: <LessonPage /> },
+      { path: "/student/results", element: <QuizResultsPage /> },
     ],
   },
   {
