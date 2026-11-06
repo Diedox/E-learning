@@ -8,10 +8,11 @@ import LoginPage from "../pages/auth/LoginPage.jsx";
 import StudentDashboardPage from "../pages/student/StudentDashboardPage.jsx";
 import LessonPage from "../pages/student/LessonPage.jsx";
 import QuizResultsPage from "../pages/student/QuizResultsPage.jsx";
+import TeacherDashboardPage from "../pages/teacher/TeacherDashboardPage.jsx";
+import LessonEditorPage from "../pages/teacher/LessonEditorPage.jsx";
+import QuestionsPage from "../pages/teacher/QuestionsPage.jsx";
+import TeacherProgressPage from "../pages/teacher/TeacherProgressPage.jsx";
 
-function page(title, description) {
-  return <RoutePlaceholder title={title} description={description} />;
-}
 
 export const router = createBrowserRouter([
   {
@@ -35,10 +36,22 @@ export const router = createBrowserRouter([
   {
     element: <TeacherLayout />,
     children: [
-      { path: "/teacher/dashboard", element: page("Panel docente", "Resumen de lecciones y actividad.") },
-      { path: "/teacher/lessons/new", element: page("Editor de lecciones", "Crea y publica contenido.") },
-      { path: "/teacher/questions", element: page("Gestión de preguntas", "Administra el banco de preguntas.") },
-      { path: "/teacher/progress", element: page("Progreso de estudiantes", "Consulta el avance de tus estudiantes.") },
+      {
+        path: "/teacher/dashboard",
+        element: <TeacherDashboardPage />,
+      },
+      {
+        path: "/teacher/lessons/new",
+        element: <LessonEditorPage />,
+      },
+      {
+        path: "/teacher/questions",
+        element: <QuestionsPage />,
+      },
+      {
+        path: "/teacher/progress",
+        element: <TeacherProgressPage />,
+      },
     ],
   },
   {
