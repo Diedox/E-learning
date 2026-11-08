@@ -1,126 +1,163 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import LessonForm from "../../components/content/LessonForm.jsx";
+import Button from "../../components/ui/Button.jsx";
+import Card from "../../components/ui/Card.jsx";
+import Toast from "../../components/ui/Toast.jsx";
 
-const initialForm = {
+const emptyLesson = {
   title: "",
-  unit: "Unit 1: Fundamentals",
+  summary: "",
   explanation: "",
-  pronunciationTip: "",
+  example: "",
+  mediaType: "",
+  mediaUrl: "",
+  unitId: "",
+  order: "1",
+  published: false,
 };
 
 export default function LessonEditorPage() {
-  const [form, setForm] = useState(initialForm);
-  const [saved, setSaved] = useState(false);
+  const navigate = useNavigate();
+  const [lesson, setLesson] = useState(emptyLesson);
+  const [errors, setErrors] = useState({});
+  const [toast, setToast] = useState(null);
 
-  function handleChange(event) {
-    const { name, value } = event.target;
+  function validateLesson() {
+    const nextErrors = {};
 
-    setSaved(false);
-    setForm((currentForm) => ({
-      ...currentForm,
-      [name]: value,
-    }));
+    if (!lesson.title.trim()) {
+      nextErrors.title = "El título es obligatorio.";
+    }
+
+    if (!lesson.explanation.trim()) {
+      nextErrors.explanation = "La explicación es obligatoria.";
+    }
+
+    if (!lesson.unitId) {
+      nextErrors.unitId = "Selecciona una unidad.";
+    }
+
+    if (
+      !Number.isInteger(Number(lesson.order)) ||
+      Number(lesson.order) < 1
+    ) {
+      nextErrors.order = "El orden debe ser un número mayor que cero.";
+    }
+
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    setSaved(true);
+  function saveLesson(publish = false) {
+    if (!validateLesson()) {
+      setToast({
+        message: "Revisa los campos obligatorios antes de guardar.",
+        variant: "error",
+      });
+      return;
+    }
+
+    const savedLesson = {
+      ...lesson,
+      published: publish || lesson.published,
+      order: Number(lesson.order),
+    };
+
+    const savedLessons = JSON.parse(
+      localStorage.getItem("linguastep-lessons") ?? "[]"
+    );
+
+    localStorage.setItem(
+      "linguastep-lessons",
+      JSON.stringify([...savedLessons, savedLesson])
+    );
+
+    setLesson(savedLesson);
+
+    setToast({
+      message: publish
+        ? "Lección publicada correctamente."
+        : "Borrador guardado correctamente.",
+      variant: "success",
+    });
+  }
+
+  function cancelEditing() {
+    setLesson(emptyLesson);
+    setErrors({});
+    setToast(null);
+    navigate("/teacher/dashboard");
   }
 
   return (
     <div className="mx-auto w-full max-w-container-max">
-      <header className="mb-xl">
-        <p className="mb-xs font-label-md text-secondary">Contenido</p>
-        <h1 className="font-headline-xl text-primary">Editor de lecciones</h1>
-        <p className="mt-sm text-on-surface-variant">
-          Crea el contenido que verán tus estudiantes.
-        </p>
+      <header className="mb-lg flex flex-col items-start justify-between gap-md md:flex-row md:items-center">
+        <div>
+          <Link
+            className="mb-xs inline-flex items-center gap-xs font-label-md text-label-md text-on-surface-variant transition-colors hover:text-primary"
+            to="/teacher/dashboard"
+          >
+            <span
+              aria-hidden="true"
+              className="material-symbols-outlined text-lg"
+            >
+              arrow_back
+            </span>
+            Volver al panel
+          </Link>
+
+          <h1 className="font-headline-lg text-headline-lg text-primary">
+            Editor de lecciones
+          </h1>
+
+          <p className="mt-xs font-body-md text-body-md text-on-surface-variant">
+            Crea o modifica el contenido de una lección.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-sm">
+          <Button onClick={cancelEditing} variant="secondary">
+            Cancelar
+          </Button>
+
+          <Button onClick={() => saveLesson(false)} variant="neutral">
+            Guardar borrador
+          </Button>
+
+          <Button onClick={() => saveLesson(true)}>
+            Publicar
+          </Button>
+        </div>
       </header>
 
-      <form
-        className="space-y-lg rounded-xl bg-surface-container-lowest p-lg"
-        onSubmit={handleSubmit}
-      >
-        <div>
-          <label className="font-bold text-primary" htmlFor="title">
-            Título de la lección
-          </label>
-          <input
-            className="mt-sm block w-full rounded-lg border-outline-variant"
-            id="title"
-            name="title"
-            onChange={handleChange}
-            required
-            value={form.title}
-          />
-        </div>
+      {toast && (
+        <Toast
+          className="mb-md"
+          message={toast.message}
+          onClose={() => setToast(null)}
+          variant={toast.variant}
+        />
+      )}
 
-        <div>
-          <label className="font-bold text-primary" htmlFor="unit">
-            Unidad
-          </label>
-          <select
-            className="mt-sm block w-full rounded-lg border-outline-variant"
-            id="unit"
-            name="unit"
-            onChange={handleChange}
-            value={form.unit}
-          >
-            <option>Unit 1: Fundamentals</option>
-            <option>Unit 2: Conversations</option>
-            <option>Unit 3: People and places</option>
-            <option>Unit 4: Next steps</option>
-          </select>
-        </div>
+      <LessonForm
+        errors={errors}
+        lesson={lesson}
+        onChange={setLesson}
+        onPublishChange={(published) =>
+          setLesson((current) => ({
+            ...current,
+            published,
+          }))
+        }
+      />
 
-        <div>
-          <label className="font-bold text-primary" htmlFor="explanation">
-            Explicación
-          </label>
-          <textarea
-            className="mt-sm block min-h-32 w-full rounded-lg border-outline-variant"
-            id="explanation"
-            name="explanation"
-            onChange={handleChange}
-            required
-            value={form.explanation}
-          />
-        </div>
-
-        <div>
-          <label className="font-bold text-primary" htmlFor="pronunciationTip">
-            Consejo de pronunciación
-          </label>
-          <textarea
-            className="mt-sm block min-h-24 w-full rounded-lg border-outline-variant"
-            id="pronunciationTip"
-            name="pronunciationTip"
-            onChange={handleChange}
-            value={form.pronunciationTip}
-          />
-        </div>
-
-        {saved && (
-          <p className="font-bold text-secondary" role="status">
-            Borrador guardado correctamente.
-          </p>
-        )}
-
-        <div className="flex flex-col gap-sm sm:flex-row">
-          <button
-            className="rounded-lg bg-secondary px-md py-sm font-bold text-on-secondary"
-            type="submit"
-          >
-            Guardar borrador
-          </button>
-          <button
-            className="rounded-lg bg-surface-container-high px-md py-sm font-bold text-primary"
-            onClick={() => setSaved(false)}
-            type="button"
-          >
-            Cancelar
-          </button>
-        </div>
-      </form>
+      <Card className="mt-md border-outline-variant bg-surface-container-low p-md">
+        <p className="font-body-md text-sm text-on-surface-variant">
+          El editor guarda el contenido localmente en este prototipo; no se
+          envía a un servidor.
+        </p>
+      </Card>
     </div>
   );
 }
